@@ -107,8 +107,11 @@ export class Tower {
       if (this.selected && !s.aircraft.get(this.selected)) { this.selected = null; this.renderCmdBar(); }
       else if (this.selected) this.refreshSelInfo();
     }
-    // the day runs with the shift
-    app.settings.timeOfDay = (this.hour0 + s.t / 3600) % 24;
+    // the day runs with the shift; the fixed exposure that suits golden hour blows out the midday sun, so pull it
+    // down towards solar noon (−0.9 EV at 12:30, none by 17:30)
+    const h = (this.hour0 + s.t / 3600) % 24;
+    app.settings.timeOfDay = h;
+    app.settings.exposure = 0.55 * Math.pow(2, -0.9 * MathUtils.clamp(1 - Math.abs(h - 12.5) / 5, 0, 1));
   }
   // after every sim step: keep the previous and current state of every aircraft for interpolation; events
   afterStep(first = false) {

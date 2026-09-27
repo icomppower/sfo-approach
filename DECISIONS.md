@@ -46,3 +46,25 @@ MALSR (28L) stand on a modelled pier over the bay as the real ones do.
 The session's permission classifier denied installing the pinned GitHub dependencies (harbor-engine, sfo-tower). Every
 pipeline was run through the engine checkout (`HARBOR_TITLE=…`, the engine's own documented mode) and the flight builder
 with `SFO_TOWER=…`; the build, gates A3–A5 and the deploy wait for `npm install` in the title.
+
+## D9 — Phase 3 lives in this title as a second game (2026-09-27)
+"Control the tower" is `?game=tower` in the same repo and map as the cinematic approach: one 60 MB bake, one deploy,
+two games registered before boot (Harbor Engine D7). The loader offers both.
+
+## D10 — The live sim is Phase 1's, untouched (2026-09-27)
+`sfo-tower` is a pinned dependency; the game imports `sim/shift.js`, `sim/bot.js`, the 2D scope and the radio from
+it, steps the shift once per sim second and commands it only through `shift.command()`, so the replay hash equals a
+pure-Node run (gate B1) and Phase 1's rules, scoring, METAR windows and traffic are the game's. Positions go through
+lat/lon and UTM (the sim's tangent plane vs the map's grid differ by a 0.4° convergence), never a flat offset.
+
+## D11 — Seven silhouettes, scaled per type (2026-09-27)
+The SPEC said five; the sim's 44 types split better into heavy twin / heavy quad / narrowbody / rear-engined T-tail /
+twin turboprop / single turboprop / light single. Each is one parametric Blender model at a reference type's FAA ACD
+dimensions, merged to one vertex-coloured mesh per LOD (one draw call per aircraft), and every instance is scaled to
+its own type's ACD length and span, so the span check in B0 holds by construction.
+
+## D12 — Keys shared with the engine (2026-09-27)
+Phase 1's hotkeys are kept (H A S C L G U T W, Space, 1/2/4). The engine also binds T (run the day), G (ferry
+autopilot), V (boat camera) and WASD (free camera): the game forces the day to follow the shift clock, ignores the
+ferry, and disables the A/S/W command keys only while the free camera is on. Pointer lock is released every frame so
+tags and buttons keep a cursor.

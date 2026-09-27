@@ -8,37 +8,32 @@
  "frame": "BayFrame (x east, z south); node translation = tile centre",
  "heights": {
   "log": {
-   "osmHeight": 244,
-   "osmLevels": 365,
-   "classDefault": 4531,
-   "generic": 18590,
+   "osmHeight": 249,
+   "osmLevels": 372,
+   "classDefault": 4604,
+   "generic": 18777,
    "skippedSmall": 1076,
    "skippedBad": 0,
-   "relations": 0,
-   "airport": 134
+   "relations": 271,
+   "airport": 139
   },
   "defaultHeight": 6,
   "levelHeight": 3,
   "maxSink": -2
  },
- "landmarkExclusions": [
-  {
-   "landmark": "SFO Air Traffic Control Tower",
-   "id": "w60500080"
-  }
- ],
+ "landmarkExclusions": [],
  "colours": {
   "walls": "typed palettes (D38)",
   "roofs": {
-   "naip": 23727,
-   "paletteTall": 3,
+   "naip": 23998,
+   "paletteTall": 4,
    "paletteNoPixels": 0
   },
   "naipMaxHeight": 40
  },
  "totals": {
-  "buildings": 23730,
-  "triangles": 546431
+  "buildings": 24002,
+  "triangles": 567090
  },
  "files": [
   {
@@ -63,21 +58,21 @@
   },
   {
    "name": "b_5_6.glb.deflate",
-   "triangles": 2304,
-   "sha256": "8b014d220f02aff1c2fe6339b68852fbb788cdc492fc2e91d2bcebd1b79d80de",
+   "triangles": 2388,
+   "sha256": "d37173035a9256ba8a38a8ea224c66fb10e9f93ed3766453c9768a36a8dcc965",
    "i": 5,
    "j": 6,
-   "buildings": 108,
+   "buildings": 109,
    "lods": [
     {
      "name": "b_5_6_l1.glb.deflate",
-     "triangles": 1641,
-     "sha256": "63a185902de6709897271b52cd230703e7f3004f77330c5b0a2b3f964aa4bd2e"
+     "triangles": 1707,
+     "sha256": "035b8b654023e1dd9e8cf3e2ff9a5d3f5ed52198083a68285d6069b53eabc724"
     },
     {
      "name": "b_5_6_l2.glb.deflate",
-     "triangles": 603,
-     "sha256": "d87bee2c0163525582cf49a21f5dfd8ba8940fa917d9011f16d66fa93285cc48"
+     "triangles": 640,
+     "sha256": "bad4ad2a83d35822547bd8a6859d68d8bba777fee3c0f6d2462a800afe8a20e1"
     }
    ]
   },
@@ -143,21 +138,21 @@
   },
   {
    "name": "b_5_7.glb.deflate",
-   "triangles": 2814,
-   "sha256": "4b90a2a32dcc8d6a1352e1a3ee630ca0fb61f70fc3548a17fbd8c86fb945934a",
+   "triangles": 3221,
+   "sha256": "144e025687801a4772c8cfaaebb2bd92d009a2cb1058b806754e4b0f8ba361ca",
    "i": 5,
    "j": 7,
-   "buildings": 126,
+   "buildings": 127,
    "lods": [
     {
      "name": "b_5_7_l1.glb.deflate",
-     "triangles": 2146,
-     "sha256": "3ce70617fc0393a12c16c94a890a20b7dadc95aa20c492b9beeb75c1dde60ea6"
+     "triangles": 2328,
+     "sha256": "37998a14d56f4c89a32659c83dddc3396f5cebb9bb99981d03659174c2006546"
     },
     {
      "name": "b_5_7_l2.glb.deflate",
-     "triangles": 908,
-     "sha256": "6563be2dfb0c4bcba3f559911948ced5fc5f3c716fab4f0650eeef377e0d5b84"
+     "triangles": 975,
+     "sha256": "fbfd6706d5945852b53f25694792caf58d1129e61147a8ab89c390bd2e6cad59"
     }
    ]
   },
@@ -183,16 +178,16 @@
   },
   {
    "name": "b_4_8.glb.deflate",
-   "triangles": 14462,
-   "sha256": "26d5b60820c00d8064610e9de7bbbf1ad8c5388dcf78c9340eb054976a5cebe8",
+   "triangles": 14498,
+   "sha256": "c2954f8c46e8d2eaee394ad6e248fbec3c199ef72f5e43a3435151f58de311aa",
    "i": 4,
    "j": 8,
-   "buildings": 706,
+   "buildings": 707,
    "lods": [
     {
      "name": "b_4_8_l1.glb.deflate",
-     "triangles": 4775,
-     "sha256": "9463fdeea304327fe8fb71b1e1ee6819071886850615dee1f95add2f8375dfac"
+     "triangles": 4799,
+     "sha256": "2311fcc51b1254619e181e71231409e086ad53ca0e1a013ef40a9171821f4d0c"
     },
     {
      "name": "b_4_8_l2.glb.deflate",
@@ -203,16 +198,16 @@
   },
   {
    "name": "b_5_8.glb.deflate",
-   "triangles": 22457,
-   "sha256": "fe3bdaa301133032d0802c26ed9b2cb7266cb287e742424f9290fa21d53e9d1d",
+   "triangles": 22553,
+   "sha256": "ed06d09fac986fc4f4e73dff912b1845000d1fdffeccf5f19f3af72d180c6a68",
    "i": 5,
    "j": 8,
-   "buildings": 1015,
+   "buildings": 1017,
    "lods": [
     {
      "name": "b_5_8_l1.glb.deflate",
-     "triangles": 5791,
-     "sha256": "d3f380a405df200635f4695aa210a18deb207ccdade243723cbab8f75231707f"
+     "triangles": 5872,
+     "sha256": "2ac77767fe179de4dbd85e97829b7f4ca9beef7d31de52d0c6f60f4a5f9d5c4a"
     },
     {
      "name": "b_5_8_l2.glb.deflate",
@@ -263,36 +258,36 @@
   },
   {
    "name": "b_4_9.glb.deflate",
-   "triangles": 17064,
-   "sha256": "649e298944655362eaa48472997e82c710ef85cee2c63b261cbf29074c58fb15",
+   "triangles": 17280,
+   "sha256": "e662c88db646b582d7ed3b600967b3d7cceb29093318ac411cba4b9f05bb69d4",
    "i": 4,
    "j": 9,
-   "buildings": 751,
+   "buildings": 752,
    "lods": [
     {
      "name": "b_4_9_l1.glb.deflate",
-     "triangles": 5568,
-     "sha256": "c4c32559ded9a1aa8da7724ed0dd70ab86f75e3a1201dac378fcb5562988b68b"
+     "triangles": 5634,
+     "sha256": "36cb2ff46b209c00bc44e03633e6f5d497964957f3633b8d8aeb070fdaf5ca7d"
     },
     {
      "name": "b_4_9_l2.glb.deflate",
-     "triangles": 68,
-     "sha256": "220bbb31a2ab3250a914e41010c2309453827e834eca4d5fd079ba8b2e4319e8"
+     "triangles": 90,
+     "sha256": "8cd816ce7394f962f73aa80f37f4ad73f9ef05ee8796e47be4090bd642278feb"
     }
    ]
   },
   {
    "name": "b_5_9.glb.deflate",
-   "triangles": 27555,
-   "sha256": "efe6c24e8c6df30699443bec1bcf45c26d82e15cd968789f19cf87a5c8dac7f0",
+   "triangles": 27580,
+   "sha256": "a77f928e4e3aceec6d279a5cebf5671c7a58355a7ef09297dbe78adcb794fa37",
    "i": 5,
    "j": 9,
-   "buildings": 1302,
+   "buildings": 1303,
    "lods": [
     {
      "name": "b_5_9_l1.glb.deflate",
-     "triangles": 9149,
-     "sha256": "f212afbd1de329815cfe28d63fbb914a0cc9bcdaf6b25577d77c46cb1c946456"
+     "triangles": 9171,
+     "sha256": "35752c531e496a15771a250af86c69be1043cea8f5126e264f00014a1f1eaafc"
     },
     {
      "name": "b_5_9_l2.glb.deflate",
@@ -303,41 +298,41 @@
   },
   {
    "name": "b_6_9.glb.deflate",
-   "triangles": 3027,
-   "sha256": "1f5e1d7719d30cabf47a99ad13874755636784e238e706d09fc22caba3a239ba",
+   "triangles": 4286,
+   "sha256": "d858392c6944cea208c0bf55f56a8d6ace9ae90f9a38a27e35fa980b9d4ab8e7",
    "i": 6,
    "j": 9,
-   "buildings": 42,
+   "buildings": 45,
    "lods": [
     {
      "name": "b_6_9_l1.glb.deflate",
-     "triangles": 1358,
-     "sha256": "96bf6c506149d27b6de5652580cea2530e1fd0a7e1501d2331b7e9cfe82a30af"
+     "triangles": 1804,
+     "sha256": "d6ffd1845f9d1524e63c5ccd62360abad9b532b5b19ffd95f5527d05a6d43d78"
     },
     {
      "name": "b_6_9_l2.glb.deflate",
-     "triangles": 756,
-     "sha256": "27d688e1d4362229a65aa1239df55eb628f7b8974ed890c96df76e5a3d7e3d09"
+     "triangles": 1011,
+     "sha256": "74e50ebb15e65d92a86cf83feed59068236a2f4e1919b342068187b6abdc5f9f"
     }
    ]
   },
   {
    "name": "b_7_9.glb.deflate",
-   "triangles": 168,
-   "sha256": "beecdd329a9fa527cab57872a581395e02d760c57edeb6854b45869a52aea49c",
+   "triangles": 649,
+   "sha256": "add7732778d404278d0d4aa979c94b7b0d7811993c879937365d214125145d35",
    "i": 7,
    "j": 9,
-   "buildings": 6,
+   "buildings": 7,
    "lods": [
     {
      "name": "b_7_9_l1.glb.deflate",
-     "triangles": 87,
-     "sha256": "5ecee09e7d6ae19cfccbfa5d5d9ceecc2da83ea05985237c9e2c16ee1a10b173"
+     "triangles": 283,
+     "sha256": "e6a4d371c3ce6ef67c0f4d2ba16405408f80097bd2e0fa81fe4624d3ed152323"
     },
     {
      "name": "b_7_9_l2.glb.deflate",
-     "triangles": 34,
-     "sha256": "cc36b17919c65b5f22599c054d0589bfcc7c1da5d85ac98ea99d482834aecf7c"
+     "triangles": 191,
+     "sha256": "544ac28be29ec9655d24f6d8e85acea866c45857e766f8bf052644bd0f1f56b9"
     }
    ]
   },
@@ -363,16 +358,16 @@
   },
   {
    "name": "b_4_10.glb.deflate",
-   "triangles": 9896,
-   "sha256": "1b25b889a37fb8f1fb207317fa84c9c4fb9fc6eabe8b1a49ecd63b3f42ed83b7",
+   "triangles": 9920,
+   "sha256": "85ebf7fd766996c4bff59fa06587e513e6dd8e6cb6f140dae35c7808a922cbdf",
    "i": 4,
    "j": 10,
-   "buildings": 422,
+   "buildings": 423,
    "lods": [
     {
      "name": "b_4_10_l1.glb.deflate",
-     "triangles": 4900,
-     "sha256": "3b816a064da38cadbb444837711edc271537c7fc1c8ca8c10346bab7703734b8"
+     "triangles": 4924,
+     "sha256": "fe49d66309098d60d529121f4acef0af578a26cbaf017e2ed506ad93d2cf3168"
     },
     {
      "name": "b_4_10_l2.glb.deflate",
@@ -383,21 +378,21 @@
   },
   {
    "name": "b_5_10.glb.deflate",
-   "triangles": 22975,
-   "sha256": "1ffde2d14e2a99cecd7cd3b3e23056d438c73c00c7ca0283f1fcc7ce9cb90cbd",
+   "triangles": 24082,
+   "sha256": "76a5fd016f557fb717f8c2e2c5aec29ccf28a31b06af3950a6d8e18fa3c1b27c",
    "i": 5,
    "j": 10,
-   "buildings": 1088,
+   "buildings": 1099,
    "lods": [
     {
      "name": "b_5_10_l1.glb.deflate",
-     "triangles": 13865,
-     "sha256": "3d4c6750e96d10a44482154231d68babd3e6bfdd65a988d16dd06079d505459b"
+     "triangles": 14744,
+     "sha256": "99723420054ce00f24db4aa2fa55f00731445fc49abeaf550fc2966821569230"
     },
     {
      "name": "b_5_10_l2.glb.deflate",
-     "triangles": 362,
-     "sha256": "2551130276a83323d843ab9ef5bac6468eb0a4b4495cac9a45c4d3a7d4ce12ba"
+     "triangles": 634,
+     "sha256": "2d4cafa5e88e5b9d8521188e9dc1f2980ff3847f542f3a29cd3c5cab206ea19b"
     }
    ]
   },
@@ -423,21 +418,21 @@
   },
   {
    "name": "b_7_10.glb.deflate",
-   "triangles": 951,
-   "sha256": "4ab2d5ad760d0f932d498082f4f7121c7244da54dc4a5a8718e1f708bbe0be11",
+   "triangles": 975,
+   "sha256": "5e902a3cc238b5a83bc2d7af44b2bb52e1798c60e30096952a5dbc7c05e96461",
    "i": 7,
    "j": 10,
-   "buildings": 33,
+   "buildings": 34,
    "lods": [
     {
      "name": "b_7_10_l1.glb.deflate",
-     "triangles": 568,
-     "sha256": "eadc32168a2821f65fb16a662f67dd8cafced0607ed2551a24c5913d5d19ea92"
+     "triangles": 592,
+     "sha256": "40c7d35abb6e3f105e427a88542af44b5119a415ecdcfd0934acc0a1745dccbc"
     },
     {
      "name": "b_7_10_l2.glb.deflate",
-     "triangles": 159,
-     "sha256": "5b1c575b2fd836f6ae35faa9c784ed416ff7b1a26318bff943cf3f8ad7f90bac"
+     "triangles": 169,
+     "sha256": "94faec4da47e17f0d807dba0715415293ebbe43b36661573ca2f953f66c708e6"
     }
    ]
   },
@@ -463,16 +458,16 @@
   },
   {
    "name": "b_4_11.glb.deflate",
-   "triangles": 5157,
-   "sha256": "3370bb795dcf46daade4adbb77e9cd15070c0f1d352e58b450405c45b8383171",
+   "triangles": 5410,
+   "sha256": "5b57a390c310d9dafb1d1ee05d13d5e4361dc9d2a8001c0821a095924d5309dc",
    "i": 4,
    "j": 11,
-   "buildings": 210,
+   "buildings": 220,
    "lods": [
     {
      "name": "b_4_11_l1.glb.deflate",
-     "triangles": 3170,
-     "sha256": "06793822b54ad0a2a803d771d6a0821cc1296282598914ca010a7030cdcbcf47"
+     "triangles": 3405,
+     "sha256": "4161af202c16c679352d1fa22bfe8deb1e4e29a8078fe9bef33c24550b6b3791"
     },
     {
      "name": "b_4_11_l2.glb.deflate",
@@ -483,16 +478,16 @@
   },
   {
    "name": "b_5_11.glb.deflate",
-   "triangles": 17604,
-   "sha256": "d108633e33a7a786bcf8a0b2a4122e90e2465acb698a710e7fe101c7bc7e0a44",
+   "triangles": 18003,
+   "sha256": "4559262196662dd008ceed8cdb1716b6317d634e0ea59255cbed017efa10a8be",
    "i": 5,
    "j": 11,
-   "buildings": 764,
+   "buildings": 774,
    "lods": [
     {
      "name": "b_5_11_l1.glb.deflate",
-     "triangles": 11084,
-     "sha256": "af97fcb3a303014f2c438192f3c913ad79ee11f28f7ecc10dfe30c811a38dc22"
+     "triangles": 11342,
+     "sha256": "987ce8b0234e7c0825df7332d6ae7af43577f64298f5c4f45ee8552c30f6fa66"
     },
     {
      "name": "b_5_11_l2.glb.deflate",
@@ -503,21 +498,21 @@
   },
   {
    "name": "b_6_11.glb.deflate",
-   "triangles": 11278,
-   "sha256": "03e8eec0e0aaf02be1591ab8d217235c58768f7ef8c2dca63dd1af27f976f1ce",
+   "triangles": 12245,
+   "sha256": "eda929971fbdf2ddd9e14aae8dcf7a77841f3f2c6caf2ca431509366495b88d7",
    "i": 6,
    "j": 11,
-   "buildings": 746,
+   "buildings": 753,
    "lods": [
     {
      "name": "b_6_11_l1.glb.deflate",
-     "triangles": 7614,
-     "sha256": "9ffb95beadec8d9ca3b414c12a02c7d7caa9a8b1e82875b3876e988d6671d2d5"
+     "triangles": 8218,
+     "sha256": "c51678c358c52e0521d1d1e695b4d1cab5a2a4dc8f36806c3ce62d8d6704e5f8"
     },
     {
      "name": "b_6_11_l2.glb.deflate",
-     "triangles": 358,
-     "sha256": "36436d4c2a21ae4cfdf651975b100aa82e3918b969e01929108ec2c2b5bf6d35"
+     "triangles": 524,
+     "sha256": "10cf39515d8149791370c8cb97c6013bb9dbe1d1738f3dc3c1b7bb3bf3a0f2a5"
     }
    ]
   },
@@ -543,16 +538,16 @@
   },
   {
    "name": "b_8_11.glb.deflate",
-   "triangles": 1022,
-   "sha256": "9b60e2ce1c6cf34e7e12fe9fdb4e9a797109cfc54e8ba7f97c0019364157a6dd",
+   "triangles": 1090,
+   "sha256": "4ce4405f96d5ca14b2c5239ebcdf2e13f2d2a81b72b0c9d34039ee050ccb9152",
    "i": 8,
    "j": 11,
-   "buildings": 53,
+   "buildings": 54,
    "lods": [
     {
      "name": "b_8_11_l1.glb.deflate",
-     "triangles": 807,
-     "sha256": "8b54c9923886048baebca13d9a5d481f965209e9e78731355d5999862b7b454f"
+     "triangles": 857,
+     "sha256": "0c957f460b2109ca57c6cf03240db7b78631673f090b77a225d0a9e455165850"
     },
     {
      "name": "b_8_11_l2.glb.deflate",
@@ -623,41 +618,41 @@
   },
   {
    "name": "b_11_13.glb.deflate",
-   "triangles": 11464,
-   "sha256": "fe67bc8e4267f8d53b45fbb46356dfe51c8be7b0cf4f88bc46f795ce73d6d425",
+   "triangles": 12022,
+   "sha256": "b130fb031644f3f5ce282121a718e34f87133d3d770ac6c467a28909e012f59c",
    "i": 11,
    "j": 13,
-   "buildings": 550,
+   "buildings": 555,
    "lods": [
     {
      "name": "b_11_13_l1.glb.deflate",
-     "triangles": 5228,
-     "sha256": "72a89446c47fcef924dd989f80f072fab541d00cf9b14ab206bb9c00c6eb771d"
+     "triangles": 5525,
+     "sha256": "50e4d6e5873c2cf47818e872ae92bdefc760ab949134fcbf01b1e99e2e877e2b"
     },
     {
      "name": "b_11_13_l2.glb.deflate",
-     "triangles": 38,
-     "sha256": "92c75882386dbf72a7c2ec10bd37a55589aebddf7d4fc611cd3d1911e45281bd"
+     "triangles": 130,
+     "sha256": "e41238839419174f68f4c0206fab115c4ec20daf932efeab37aaa0dae8bbf214"
     }
    ]
   },
   {
    "name": "b_12_13.glb.deflate",
-   "triangles": 30484,
-   "sha256": "d1d748dc88aa53754feb4635e1f28fad9511d631470ef647b292347df6c43d50",
+   "triangles": 30850,
+   "sha256": "01a4c45fa2d3083b1dfd50d06f9a5a9665c51c21d4dc2672f751caa255b2a9ce",
    "i": 12,
    "j": 13,
-   "buildings": 1499,
+   "buildings": 1500,
    "lods": [
     {
      "name": "b_12_13_l1.glb.deflate",
-     "triangles": 11813,
-     "sha256": "4a257e11a98ac71b1cc7d3fccd1ed4864d05efdf968245894d11982f6696b01f"
+     "triangles": 12035,
+     "sha256": "90dba6f248fa5f1d456494ac0515bafd9828d620d2153cd70a7788a1803e91b4"
     },
     {
      "name": "b_12_13_l2.glb.deflate",
-     "triangles": 48,
-     "sha256": "958c28cd386732b788d844cc61ad958ae2089605dd93d7507c9584e88287d3f5"
+     "triangles": 58,
+     "sha256": "dbcfdfef161781c12f947f56e4999c6f68c773a27f7990d9d8b882291e589604"
     }
    ]
   },
@@ -703,36 +698,36 @@
   },
   {
    "name": "b_15_13.glb.deflate",
-   "triangles": 2578,
-   "sha256": "21e5f793dcc4570644c9d6b8d064c9767c235650f158ada6f75d8470259ae629",
+   "triangles": 3588,
+   "sha256": "8985d8d0f7b150e4c5e3fbb03fa3086d1914220285484dd9c529600e73970458",
    "i": 15,
    "j": 13,
-   "buildings": 100,
+   "buildings": 114,
    "lods": [
     {
      "name": "b_15_13_l1.glb.deflate",
-     "triangles": 1845,
-     "sha256": "2b5e501bb76ac8190a318109fd47e83a0d413220230fe2c098984bb1e4b0d9d2"
+     "triangles": 2462,
+     "sha256": "0581befd0a0fceef2bbff6a6be643db676649fe3ad4cf5e93496ded181ba684c"
     },
     {
      "name": "b_15_13_l2.glb.deflate",
-     "triangles": 217,
-     "sha256": "a477ca39a53a47f4c2fed19a6a2c4fb5b65b3f242cbec210b7d34d03f97dae12"
+     "triangles": 282,
+     "sha256": "f427819711f36e89131d2477dcf10af785646d3fe6a9ce51690405ec3e44c517"
     }
    ]
   },
   {
    "name": "b_16_13.glb.deflate",
-   "triangles": 3680,
-   "sha256": "2ddb64c203f800a3a3998d6d77c7017539eec7c3dc94116c29effef6de01ec21",
+   "triangles": 3854,
+   "sha256": "2e535ba599dd4c5a307f2b65cc32cdb3bc6c36b94756b3ffebf709893493f27a",
    "i": 16,
    "j": 13,
-   "buildings": 176,
+   "buildings": 183,
    "lods": [
     {
      "name": "b_16_13_l1.glb.deflate",
-     "triangles": 2660,
-     "sha256": "4fcfd606501979e9287ae83a315f3ab1f61384a07c4a93afeca1f97117dfad5f"
+     "triangles": 2834,
+     "sha256": "ef1300e555ed4e65a335c65edd560d0f3db1ba71e45113d477548c0227971c6a"
     },
     {
      "name": "b_16_13_l2.glb.deflate",
@@ -743,36 +738,36 @@
   },
   {
    "name": "b_11_14.glb.deflate",
-   "triangles": 9044,
-   "sha256": "8aeb2cf82d208927739cc291d2cf0a2747eec29b393be07d4d649b16e1aa2460",
+   "triangles": 10015,
+   "sha256": "3b6b97d480eaddaedda59e18d64bdc953d186eece7c2569d40d052f4ad6d5d56",
    "i": 11,
    "j": 14,
-   "buildings": 437,
+   "buildings": 446,
    "lods": [
     {
      "name": "b_11_14_l1.glb.deflate",
-     "triangles": 4268,
-     "sha256": "c9892d64298f4eb82d3aa2099759e1e2bd3d4dda937b47435fa515a2306a428b"
+     "triangles": 4777,
+     "sha256": "a844e6da0ffc030e7ffd2a83293803120664855d9ea31394e5b8b12305aafa3c"
     },
     {
      "name": "b_11_14_l2.glb.deflate",
-     "triangles": 113,
-     "sha256": "9005ec536f93034bfb4ec4efba2b43291f160b3201e70c2e03c524aec9c115df"
+     "triangles": 206,
+     "sha256": "84727a621b77d50e6eac35507ea100087ceb8c9b4e0b9d343d2d4ffbcc0a59b2"
     }
    ]
   },
   {
    "name": "b_12_14.glb.deflate",
-   "triangles": 46594,
-   "sha256": "803a4e7335985c2976d7b12d0feec7b9b4c4edd377b00d6463d367f8ad53fa24",
+   "triangles": 46696,
+   "sha256": "fa917cb7fbf0bd1b0b17748d1534994cf45cc56d2f7b357a1f3f091ace9f6860",
    "i": 12,
    "j": 14,
-   "buildings": 2132,
+   "buildings": 2135,
    "lods": [
     {
      "name": "b_12_14_l1.glb.deflate",
-     "triangles": 19794,
-     "sha256": "82731c657491df6f943c4626db878a0ffefd7503bed68692e98e2e996761b3d5"
+     "triangles": 19896,
+     "sha256": "fef2751af0ae119988ff9dacfc13d1f6ddf40c5f7e505c846f92a54c84c48aee"
     },
     {
      "name": "b_12_14_l2.glb.deflate",
@@ -783,81 +778,81 @@
   },
   {
    "name": "b_13_14.glb.deflate",
-   "triangles": 41055,
-   "sha256": "7d9873b6908a98f445fda6497a83cfa58b9b6e4df2f51216e031b9790272f560",
+   "triangles": 41361,
+   "sha256": "f97bae9a0a7a08bf419c5984c6ad2d7225d9f07685099b52fe0a79f24fbd279b",
    "i": 13,
    "j": 14,
-   "buildings": 1500,
+   "buildings": 1502,
    "lods": [
     {
      "name": "b_13_14_l1.glb.deflate",
-     "triangles": 24579,
-     "sha256": "67d935a2699a214a167fcc059378ecea804cc8d9109197f34ef7a8be1db00e9f"
+     "triangles": 24846,
+     "sha256": "1d071090cb65ac9b784c03334bb9302531fb032ca1599efe1fba47e27a85c7b7"
     },
     {
      "name": "b_13_14_l2.glb.deflate",
-     "triangles": 20,
-     "sha256": "0c298e8d9a9730f2d7268b79c2d3bc5a49cfa1eee4d8be3dfbd08ed5cb138b0f"
+     "triangles": 145,
+     "sha256": "48a4edf72581b957c2507c3bdbb027a88c5b803f1e2d3f1070fcfdc493ad77ed"
     }
    ]
   },
   {
    "name": "b_14_14.glb.deflate",
-   "triangles": 11120,
-   "sha256": "1b9a422c9c4dd6963f92729a73b13c0fb0f9ee69a83d2a32cf1adfc21c988c36",
+   "triangles": 11483,
+   "sha256": "a1b20d02dc53ebe6807465e6a901247ebe1740473a2c86bd4c007ee9f4f5a442",
    "i": 14,
    "j": 14,
-   "buildings": 291,
+   "buildings": 294,
    "lods": [
     {
      "name": "b_14_14_l1.glb.deflate",
-     "triangles": 6323,
-     "sha256": "38d2ae3bfaebf130d38accecf3a72bdc9361de6faa9aa0abade69e3f6f552d23"
+     "triangles": 6518,
+     "sha256": "4e9355eecad6f385b9d55ff34a95927d51baa266c5eda3166b8db0bccc0835fa"
     },
     {
      "name": "b_14_14_l2.glb.deflate",
-     "triangles": 1501,
-     "sha256": "88a917fc086bd7521806debec2da3cbc42f7e68638bff63c16f2355ab4c50b60"
+     "triangles": 1529,
+     "sha256": "caf75c0c850bcfe7509048b351d825738f0bbacbfa78c344d25cdbbdcfb3d700"
     }
    ]
   },
   {
    "name": "b_15_14.glb.deflate",
-   "triangles": 13927,
-   "sha256": "9868e00e0bb87a0948a8f3cf0c4a5251dd487db2efd3beb578e84187342e962a",
+   "triangles": 16818,
+   "sha256": "6be0d201f9a87e61324145e214d1db7aec9c9a93303313290cc4b010d1797b7d",
    "i": 15,
    "j": 14,
-   "buildings": 574,
+   "buildings": 610,
    "lods": [
     {
      "name": "b_15_14_l1.glb.deflate",
-     "triangles": 9830,
-     "sha256": "9d2b9a776d3a5d1d2d5c6fadc48a74dfb1c08c79627917c66aff6250382f03d1"
+     "triangles": 11692,
+     "sha256": "88c2f5962eaffa5a96fbbb5b898646388e1481e4760edf050208a96c1ab167d9"
     },
     {
      "name": "b_15_14_l2.glb.deflate",
-     "triangles": 792,
-     "sha256": "1b915c43ddaed4895208523037b469573b1a82bbd7e15f985990281e22f0d6b6"
+     "triangles": 1083,
+     "sha256": "2f9e182fd4358067ef18e3e3d9a576c4fa8b3779078d225a436f3dc303bb46f8"
     }
    ]
   },
   {
    "name": "b_16_14.glb.deflate",
-   "triangles": 33769,
-   "sha256": "5c00b627e23cd8851a5f73a413b2094d86bb231c3515e4dcde8208ffced7d4e3",
+   "triangles": 35116,
+   "sha256": "aaa462d1221c6313e6e5cc24b6f9f10ff25a860a4cf1fac50ee7bee92d4cc116",
    "i": 16,
    "j": 14,
-   "buildings": 1190,
+   "buildings": 1229,
    "lods": [
     {
      "name": "b_16_14_l1.glb.deflate",
-     "triangles": 20542,
-     "sha256": "36e5dcbbcd0dd0311f8795587daab7d94b824ca62a8a22fbcf3642d76dcde10e"
+     "triangles": 21661,
+     "sha256": "e129fdb8ac8a1ec35a806a57a85ce270f2e181808abef14e2a7f2e4d6743da88"
     },
     {
      "name": "b_16_14_l2.glb.deflate",
-     "triangles": 118,
-     "sha256": "3b584c894f59f22a4221f66a98cb4d1f7b356fb88ca55ef65f5476669ed08aea"
+     "triangles": 242,
+     "sha256": "5ad6dfce1859d6e609bdf16814e94d6197a2ade2ff31417409c3df8c89c76bd6"
     }
    ]
   },
@@ -883,16 +878,16 @@
   },
   {
    "name": "b_11_15.glb.deflate",
-   "triangles": 11353,
-   "sha256": "812a0c94f66b5fe6960c8c9a691f9dfec692c6992f4f56aa3aa3fb833b7f0bb5",
+   "triangles": 11377,
+   "sha256": "7f43685de4be1cce6f3f1d35ca682384a7fbb32221c3a147e1dd1e6f888bc3de",
    "i": 11,
    "j": 15,
-   "buildings": 476,
+   "buildings": 477,
    "lods": [
     {
      "name": "b_11_15_l1.glb.deflate",
-     "triangles": 6180,
-     "sha256": "d0d435d3b04d1ee8686522da65da545e68bc387186ea2fba0429ceee3d633279"
+     "triangles": 6204,
+     "sha256": "668d457e71615180e92a8d3f372cea89e8bea2351f07618838eca5ef5ca0dc26"
     },
     {
      "name": "b_11_15_l2.glb.deflate",
@@ -903,56 +898,56 @@
   },
   {
    "name": "b_12_15.glb.deflate",
-   "triangles": 28402,
-   "sha256": "7cd1cb2e7de66b1a25de3179e25a587ec3541c8eaef59b847aca66240d0e97b4",
+   "triangles": 28866,
+   "sha256": "1da51b66f8d9fa9df4ec9cf64acce021f4311c3952c6609b24c67ca222f07142",
    "i": 12,
    "j": 15,
-   "buildings": 1193,
+   "buildings": 1199,
    "lods": [
     {
      "name": "b_12_15_l1.glb.deflate",
-     "triangles": 12614,
-     "sha256": "e0d3030c3314114d15005271b9a8b5fa6a7b46351d675a6dd6f9e7f71dbb4777"
+     "triangles": 12946,
+     "sha256": "723b464e89ad4515af0921e012da5aed2928a483cc7b2e431bbb2571b4c304a6"
     },
     {
      "name": "b_12_15_l2.glb.deflate",
-     "triangles": 742,
-     "sha256": "69fdc011b19f875413297e453b2a699d0419ba140c2b63a3c7cd4aacc6b634fb"
+     "triangles": 848,
+     "sha256": "d5d0f52516ba5586a1da1d91a0e4b07c2b45e014083bee28ad0257ca556ab112"
     }
    ]
   },
   {
    "name": "b_13_15.glb.deflate",
-   "triangles": 25326,
-   "sha256": "07f65392a69079457ca8d63ffc9cbd1b38e0012927a00b6dbf7d7befda97d0f5",
+   "triangles": 26506,
+   "sha256": "820bd926bfef4e7fb0988c19a6ba5666efa4ec4144a310da82663ff682a11950",
    "i": 13,
    "j": 15,
-   "buildings": 950,
+   "buildings": 955,
    "lods": [
     {
      "name": "b_13_15_l1.glb.deflate",
-     "triangles": 16391,
-     "sha256": "573a03fa33aed02a4f8e0fef7a2ef35939bb5cf6f7972457f2da6ae703291636"
+     "triangles": 17049,
+     "sha256": "5b3bcfb798ca201fbe781c12894ebcd068f5ec56311d66918eb33b4d728ead60"
     },
     {
      "name": "b_13_15_l2.glb.deflate",
-     "triangles": 289,
-     "sha256": "2a1182178736a8bbf91eb9879a58f8103146f4c771bd1af23c730c54af361c61"
+     "triangles": 511,
+     "sha256": "36c5af52e36799f03118c34ba356d7b8db3ca7541667b84ed195cad2237541b9"
     }
    ]
   },
   {
    "name": "b_14_15.glb.deflate",
-   "triangles": 17912,
-   "sha256": "5e2d0de2e4669b3c6932e67b929932b330a4f33dcdd41a77d6fde5bac357de5e",
+   "triangles": 18286,
+   "sha256": "8bd00286e1567df58bd8aad1ce3cb3eb5d5dee5c9fbb22163606056fbe815677",
    "i": 14,
    "j": 15,
-   "buildings": 708,
+   "buildings": 713,
    "lods": [
     {
      "name": "b_14_15_l1.glb.deflate",
-     "triangles": 12496,
-     "sha256": "8a26ead164a3b25730dde1d659361fa6a3bb501631957e93bb623de55e46c2aa"
+     "triangles": 12780,
+     "sha256": "a720800a46a03d981ba46b8906beb976ecf482dab29f07dac2ffc5546c28bb08"
     },
     {
      "name": "b_14_15_l2.glb.deflate",
@@ -963,16 +958,16 @@
   },
   {
    "name": "b_15_15.glb.deflate",
-   "triangles": 20757,
-   "sha256": "03dabd6423948bebf3f2aeffaac6a5acad144173c900eff8ea8497800bee5468",
+   "triangles": 21157,
+   "sha256": "20997cb5841a36da72235c1ba8ab28aa9f3024f01e5b8fa33f41402425ead005",
    "i": 15,
    "j": 15,
-   "buildings": 782,
+   "buildings": 787,
    "lods": [
     {
      "name": "b_15_15_l1.glb.deflate",
-     "triangles": 11844,
-     "sha256": "6be276e7dab1f158dc1b709032510d9e5bf50f1a5350211398c5a84510b836cc"
+     "triangles": 12154,
+     "sha256": "9ca9f2d411825da941d1f0d51d7a55c7bf13d8dc41511aab60742e1ae125dbca"
     },
     {
      "name": "b_15_15_l2.glb.deflate",
@@ -983,16 +978,16 @@
   },
   {
    "name": "b_16_15.glb.deflate",
-   "triangles": 24000,
-   "sha256": "50ee81c937b3933d9d3134bcd488c887d49e5fda9bd7ede028ac33323886098f",
+   "triangles": 25671,
+   "sha256": "6688478cc74b911602323d597449f879ef604fd2fc9dbbc7238ff02b8aefc612",
    "i": 16,
    "j": 15,
-   "buildings": 976,
+   "buildings": 1030,
    "lods": [
     {
      "name": "b_16_15_l1.glb.deflate",
-     "triangles": 15619,
-     "sha256": "e0901ce40299ee5208c77372d7a554627de1e90629b8af7cac3d5cc1bf9f5a6f"
+     "triangles": 16993,
+     "sha256": "0e116d75628e1cf68c892baa7a6746d21a9c19b4a7d63ccd37d0586f0a0846b8"
     },
     {
      "name": "b_16_15_l2.glb.deflate",
@@ -1023,16 +1018,16 @@
   },
   {
    "name": "b_11_16.glb.deflate",
-   "triangles": 1823,
-   "sha256": "59ef2c0cf646e23c2fbe25085c4c1b5e5e1d2ec050055a2f68a5c939e1e52659",
+   "triangles": 2869,
+   "sha256": "eee30eefef703bf9bca1c50b53e7bb0066da8ceff6b45cddd1cd83722e93262f",
    "i": 11,
    "j": 16,
-   "buildings": 71,
+   "buildings": 82,
    "lods": [
     {
      "name": "b_11_16_l1.glb.deflate",
-     "triangles": 1073,
-     "sha256": "017714eaa52816c8ea6bc625e1a1588766ab2185b991cb52a166a091d2f455a9"
+     "triangles": 1912,
+     "sha256": "00532858515e679e711a3a948dfc2a71eee57f55b6c568fdaf8cff7bf995db3d"
     },
     {
      "name": "b_11_16_l2.glb.deflate",
@@ -1043,16 +1038,16 @@
   },
   {
    "name": "b_12_16.glb.deflate",
-   "triangles": 5853,
-   "sha256": "13b9c7bf6f2a20414a264596a48b83ecd43132820fe367a438075d9d2400fe0b",
+   "triangles": 5910,
+   "sha256": "095e821e52a5aced9d8f09d0577e28f956e7368415540d0f0557a7325c9594c0",
    "i": 12,
    "j": 16,
-   "buildings": 270,
+   "buildings": 273,
    "lods": [
     {
      "name": "b_12_16_l1.glb.deflate",
-     "triangles": 3192,
-     "sha256": "c43d78e75bc6ff0108e8e6e8a1f0d0001bccfc02b735399e023f7a70884390ef"
+     "triangles": 3240,
+     "sha256": "38f3fff8f2324e485b3cefa2a33bab189d4ca3bc305c0405cc390b1e5f2502be"
     },
     {
      "name": "b_12_16_l2.glb.deflate",
@@ -1063,61 +1058,61 @@
   },
   {
    "name": "b_13_16.glb.deflate",
-   "triangles": 1932,
-   "sha256": "ef171be9863e7f4307318a50eb6b83d8253e6d772059347c96b17f0335a632df",
+   "triangles": 3212,
+   "sha256": "0c7e4c2ef7c948f89e1f8ee831b50a37fc212bc89b008e6ca652489bfbdbee58",
    "i": 13,
    "j": 16,
-   "buildings": 73,
+   "buildings": 80,
    "lods": [
     {
      "name": "b_13_16_l1.glb.deflate",
-     "triangles": 1046,
-     "sha256": "29a33fa6d17ffbeb6591666028da9c99b68c7beb431e6d11b6d40c5dc3f68d4e"
+     "triangles": 1508,
+     "sha256": "ec2853ff42814b5a6f912af3b8746019c2d3144900ac32f0e09b19b9d1fafb9c"
     },
     {
      "name": "b_13_16_l2.glb.deflate",
-     "triangles": 92,
-     "sha256": "bc33fb7fbf0bdee674b39887837f34478abd8a012758fb3f63eef8dce688f6c3"
+     "triangles": 210,
+     "sha256": "f1443966e0921e9cbfe99bf2091141242a3752d3096e26f8ff3460cc2cf696f7"
     }
    ]
   },
   {
    "name": "b_14_16.glb.deflate",
-   "triangles": 4470,
-   "sha256": "b1104f7f31cf8ec1eea5d7d6e149765b91526fe4f5629b60f2c07ed35745955d",
+   "triangles": 4643,
+   "sha256": "72f5ae7a395b3aef7ec334bcdac32dc6e0a9728d6eb7c2196f32ccece5a851f1",
    "i": 14,
    "j": 16,
-   "buildings": 191,
+   "buildings": 194,
    "lods": [
     {
      "name": "b_14_16_l1.glb.deflate",
-     "triangles": 3417,
-     "sha256": "758fde41ee9d025313176527db8fafa89ff34d6050cff24ae157b44228c0d368"
+     "triangles": 3554,
+     "sha256": "937046ed68f96868b70bedf150940ec0f2984e99b187cca4587c26d17791129c"
     },
     {
      "name": "b_14_16_l2.glb.deflate",
-     "triangles": 43,
-     "sha256": "6d3823e47ec63969e2124f74caa86503922d3896ecf7295cdd4188173bf4b32d"
+     "triangles": 75,
+     "sha256": "e593172543c061f66c856c1c079dfc2f107f8da3662ec546796c5481000f4481"
     }
    ]
   },
   {
    "name": "b_15_16.glb.deflate",
-   "triangles": 4750,
-   "sha256": "c3dd1901b73e5bfc4a2eb052df877dceee4ce25914a88a2b7f6d766ebac67fdb",
+   "triangles": 5206,
+   "sha256": "b16b4495643f3a7be05547282387ccf197646b272869211d00db2ac01af8fcbd",
    "i": 15,
    "j": 16,
-   "buildings": 208,
+   "buildings": 209,
    "lods": [
     {
      "name": "b_15_16_l1.glb.deflate",
-     "triangles": 2819,
-     "sha256": "f624c0594ca64ce36c324ff1a89217052a201ddf9c03dde26296966fef40bed1"
+     "triangles": 3176,
+     "sha256": "79ca041b61ddbd4e4b818469ee59a30b9d02eae6f17d5d7a72c8d3db73a6a75e"
     },
     {
      "name": "b_15_16_l2.glb.deflate",
-     "triangles": 16,
-     "sha256": "86186fcc0875d59cb18b10ff97bbef168798c6584569bb442f23a880d8e155ea"
+     "triangles": 113,
+     "sha256": "af032f811ec04f7bdedba3340a9c5d9ab0e0f49472b1c412db7961a29e7583fd"
     }
    ]
   },

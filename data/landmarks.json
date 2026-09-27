@@ -1,7 +1,28 @@
 {
   "note": "Landmarks modelled offline in Blender (pipelines/landmarks/build.py). replacesFootprint: the OSM building footprint at lat/lon is left out of the building tiles.",
   "landmarks": [
-    { "slug": "sfo-tower", "name": "SFO Air Traffic Control Tower", "lat": 37.61584, "lon": -122.38376, "replacesFootprint": true, "osmWay": 554547693, "heightM": 67.36, "source": "OSM way 554547693 (height, footprint); FAA: 221 ft tower opened 2016" },
-    { "slug": "san-mateo-bridge", "name": "San Mateo–Hayward Bridge (west section)", "lat": 37.5875, "lon": -122.2632, "replacesFootprint": false, "osmWays": [42248740, 156047241], "source": "OSM carriageways; Caltrans: high-rise west section 1.9 mi, main span clearance 135 ft, trestle 5 mi" }
+    {
+      "slug": "sfo-tower",
+      "name": "SFO Air Traffic Control Tower",
+      "lat": 37.61584,
+      "lon": -122.38376,
+      "replacesFootprint": false,
+      "osmWay": 554547693,
+      "heightM": 67.36,
+      "source": "OSM way 554547693 (height, footprint); FAA: 221 ft tower opened 2016",
+      "note": "the OSM tower way is a building:part on top of the Terminal 1/2 complex; nothing is excluded (an anchor-inside test would drop Terminal 2)"
+    },
+    {
+      "slug": "san-mateo-bridge",
+      "name": "San Mateo–Hayward Bridge (west section)",
+      "lat": 37.5875,
+      "lon": -122.2632,
+      "replacesFootprint": false,
+      "osmWays": [
+        42248740,
+        156047241
+      ],
+      "source": "OSM carriageways; Caltrans: high-rise west section 1.9 mi, main span clearance 135 ft, trestle 5 mi"
+    }
   ]
 }

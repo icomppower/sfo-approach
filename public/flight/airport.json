@@ -1,0 +1,269 @@
+{
+ "format": "sfo-airport/1",
+ "icao": "KSFO",
+ "name": "SAN FRANCISCO INTL",
+ "source": "FAA NASR via sfo-tower data/derived/ksfo-airport.json",
+ "effective": "2026/09/03",
+ "arp": [
+  -2880.34,
+  -705.46
+ ],
+ "elevFt": 13.1,
+ "elevM": 3.011,
+ "magVar": 14,
+ "msl": 0.982,
+ "runways": [
+  {
+   "id": "01L/19R",
+   "lengthFt": 7650,
+   "widthFt": 200,
+   "widthM": 60.96,
+   "surface": "ASPH",
+   "ends": [
+    {
+     "id": "1L",
+     "hdg": 28,
+     "end": [
+      -3535.31,
+      509.09
+     ],
+     "thr": [
+      -3445.5,
+      335.97
+     ],
+     "displacedFt": 640,
+     "elevM": 2.279,
+     "tdzeM": 2.34,
+     "ils": null,
+     "gsDeg": null,
+     "tchFt": null,
+     "approachLights": null,
+     "latLon": [
+      37.60789786,
+      -122.3829285
+     ],
+     "thrLatLon": [
+      37.60945288,
+      -122.38189805
+     ]
+    },
+    {
+     "id": "19R",
+     "hdg": 208,
+     "end": [
+      -2461.8,
+      -1559.9
+     ],
+     "thr": [
+      -2461.8,
+      -1559.9
+     ],
+     "displacedFt": 0,
+     "elevM": 1.822,
+     "tdzeM": 2.432,
+     "ils": null,
+     "gsDeg": 3.15,
+     "tchFt": 58,
+     "approachLights": null,
+     "latLon": [
+      37.62648136,
+      -122.37060941
+     ],
+     "thrLatLon": [
+      37.62648136,
+      -122.37060941
+     ]
+    }
+   ]
+  },
+  {
+   "id": "01R/19L",
+   "lengthFt": 8650,
+   "widthFt": 200,
+   "widthM": 60.96,
+   "surface": "ASPH",
+   "ends": [
+    {
+     "id": "1R",
+     "hdg": 28,
+     "end": [
+      -3367.54,
+      681.95
+     ],
+     "thr": [
+      -3288.97,
+      530.48
+     ],
+     "displacedFt": 560,
+     "elevM": 2.493,
+     "tdzeM": 2.432,
+     "ils": null,
+     "gsDeg": null,
+     "tchFt": null,
+     "approachLights": null,
+     "latLon": [
+      37.60632988,
+      -122.38104075
+     ],
+     "thrLatLon": [
+      37.60769047,
+      -122.38013927
+     ]
+    },
+    {
+     "id": "19L",
+     "hdg": 208,
+     "end": [
+      -2153.73,
+      -1657.49
+     ],
+     "thr": [
+      -2153.73,
+      -1657.49
+     ],
+     "displacedFt": 0,
+     "elevM": 2.218,
+     "tdzeM": 2.371,
+     "ils": "ILS/DME",
+     "gsDeg": 3,
+     "tchFt": 71,
+     "approachLights": "MALSF",
+     "latLon": [
+      37.62734219,
+      -122.36711083
+     ],
+     "thrLatLon": [
+      37.62734219,
+      -122.36711083
+     ]
+    }
+   ]
+  },
+  {
+   "id": "10L/28R",
+   "lengthFt": 11870,
+   "widthFt": 200,
+   "widthM": 60.96,
+   "surface": "ASPH",
+   "ends": [
+    {
+     "id": "10L",
+     "hdg": 118,
+     "end": [
+      -4473.79,
+      -1797.11
+     ],
+     "thr": [
+      -4473.79,
+      -1797.11
+     ],
+     "displacedFt": 0,
+     "elevM": 0.694,
+     "tdzeM": 1.152,
+     "ils": null,
+     "gsDeg": 3,
+     "tchFt": 80,
+     "approachLights": null,
+     "latLon": [
+      37.62873872,
+      -122.39339186
+     ],
+     "thrLatLon": [
+      37.62873872,
+      -122.39339186
+     ]
+    },
+    {
+     "id": "28R",
+     "hdg": 298,
+     "end": [
+      -1263.49,
+      -131.45
+     ],
+     "thr": [
+      -1344.68,
+      -173.56
+     ],
+     "displacedFt": 300,
+     "elevM": 2.98,
+     "tdzeM": 2.95,
+     "ils": "ILS/DME",
+     "gsDeg": 3,
+     "tchFt": 68,
+     "approachLights": "ALSF2",
+     "latLon": [
+      37.61353361,
+      -122.35714111
+     ],
+     "thrLatLon": [
+      37.61391813,
+      -122.35805769
+     ]
+    }
+   ]
+  },
+  {
+   "id": "10R/28L",
+   "lengthFt": 11381,
+   "widthFt": 200,
+   "widthM": 60.96,
+   "surface": "ASPH",
+   "ends": [
+    {
+     "id": "10R",
+     "hdg": 118,
+     "end": [
+      -4446.76,
+      -1525.72
+     ],
+     "thr": [
+      -4446.76,
+      -1525.72
+     ],
+     "displacedFt": 0,
+     "elevM": 1.182,
+     "tdzeM": 1.456,
+     "ils": null,
+     "gsDeg": 3,
+     "tchFt": 68,
+     "approachLights": null,
+     "latLon": [
+      37.62629111,
+      -122.39310544
+     ],
+     "thrLatLon": [
+      37.62629111,
+      -122.39310544
+     ]
+    },
+    {
+     "id": "28L",
+     "hdg": 298,
+     "end": [
+      -1368.73,
+      71.39
+     ],
+     "thr": [
+      -1449.83,
+      29.27
+     ],
+     "displacedFt": 300,
+     "elevM": 2.858,
+     "tdzeM": 2.858,
+     "ils": "ILS/DME",
+     "gsDeg": 2.85,
+     "tchFt": 67,
+     "approachLights": "MALSR",
+     "latLon": [
+      37.61171194,
+      -122.35834916
+     ],
+     "thrLatLon": [
+      37.6120965,
+      -122.35926477
+     ]
+    }
+   ]
+  }
+ ]
+}

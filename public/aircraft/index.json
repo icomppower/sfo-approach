@@ -1,0 +1,110 @@
+{
+ "format": "sfo-aircraft/1",
+ "lodDistances": [
+  900,
+  3500
+ ],
+ "refFov": 60,
+ "blender": "Blender 5.2.1",
+ "model": {
+  "id": "b77w",
+  "type": "B77W",
+  "name": "Boeing 777-300ER (generic livery)",
+  "lengthM": 73.9,
+  "spanM": 64.8,
+  "heightM": 18.5,
+  "source": "Boeing D6-58329-2, 777-200LR/-300ER Airplane Characteristics for Airport Planning"
+ },
+ "frame": "glTF: x starboard, y up, z aft (nose toward -z = heading 0); origin = ground point under the main gear",
+ "lods": [
+  {
+   "name": "b77w_lod0.glb",
+   "triangles": 4398,
+   "meshes": 13,
+   "materials": [
+    "beacon",
+    "belly",
+    "blue",
+    "dark",
+    "glass",
+    "metal",
+    "nacelle",
+    "nav_green",
+    "nav_red",
+    "nav_white",
+    "tyre",
+    "white",
+    "wing"
+   ],
+   "min": [
+    -32.400001525878906,
+    0.026918916031718254,
+    -41.70000076293945
+   ],
+   "max": [
+    32.400001525878906,
+    18.25200080871582,
+    32.20000076293945
+   ],
+   "sha256": "491aee243134cf5b162c9e66aadfcf05986cde6e3963ee8c0f5d0b7a07aa4db0"
+  },
+  {
+   "name": "b77w_lod1.glb",
+   "triangles": 2476,
+   "meshes": 13,
+   "materials": [
+    "beacon",
+    "belly",
+    "blue",
+    "dark",
+    "glass",
+    "metal",
+    "nacelle",
+    "nav_green",
+    "nav_red",
+    "nav_white",
+    "tyre",
+    "white",
+    "wing"
+   ],
+   "min": [
+    -32.400001525878906,
+    0.026918916031718254,
+    -41.70000076293945
+   ],
+   "max": [
+    32.400001525878906,
+    18.25200080871582,
+    32.20000076293945
+   ],
+   "sha256": "37f21545b5882ea2f01e181e05acf90462205df5dc3f0446b436e6a7a8892b45"
+  },
+  {
+   "name": "b77w_lod2.glb",
+   "triangles": 678,
+   "meshes": 9,
+   "materials": [
+    "beacon",
+    "blue",
+    "dark",
+    "nacelle",
+    "nav_green",
+    "nav_red",
+    "nav_white",
+    "white",
+    "wing"
+   ],
+   "min": [
+    -32.400001525878906,
+    0.29624006152153015,
+    -41.70000076293945
+   ],
+   "max": [
+    32.400001525878906,
+    18.25200080871582,
+    32.20000076293945
+   ],
+   "sha256": "206b60e28770ccdbbb4041499d6f2f9d9ce6fff612747e5c8f1cc9884245ea76"
+  }
+ ]
+}

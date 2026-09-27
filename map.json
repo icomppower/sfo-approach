@@ -1,0 +1,573 @@
+{
+  "id": "sfo-approach",
+  "name": "SFO Approach",
+  "frame": {
+    "crs": "EPSG:32610 (WGS84 / UTM zone 10N), metres; heights local MSL (Redwood City 9414523)",
+    "utmZone": 10,
+    "hemisphere": "N",
+    "originE": 558000,
+    "originN": 4163000,
+    "size": 24000,
+    "cell": 6
+  },
+  "bbox": {
+    "south": 37.5033,
+    "west": -122.4795,
+    "north": 37.7211,
+    "east": -122.2057
+  },
+  "slice": {
+    "extent": {
+      "minE": 546000,
+      "minN": 4151000,
+      "maxE": 570000,
+      "maxN": 4175000
+    },
+    "note": "24 km square: KSFO, the 28L/28R final over the bay to 8 NM (San Mateo–Hayward Bridge west end at 5 NM), Sweeney Ridge and San Bruno Mountain behind the airport (data/slice.json)"
+  },
+  "sources": [
+    {
+      "id": "terrain-3dep",
+      "file": "terrain-3dep.tif",
+      "licence": "Public domain (US Government work, USGS)",
+      "url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits"
+    },
+    {
+      "id": "bathy-ncei",
+      "file": "bathy-ncei.tif",
+      "licence": "Public domain (US Government work, NOAA NCEI)",
+      "url": "https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ngdc.mgg.dem:999919"
+    },
+    {
+      "id": "noaa-datums",
+      "file": "noaa-datums-9414523.json",
+      "licence": "Public domain (US Government work, NOAA CO-OPS)",
+      "url": "https://tidesandcurrents.noaa.gov/datums.html?id=9414523"
+    },
+    {
+      "id": "naip-bay",
+      "file": "naip-bay.tif",
+      "licence": "Public domain (US Government work, USDA Farm Service Agency NAIP)",
+      "url": "https://naip-usdaonline.hub.arcgis.com/"
+    },
+    {
+      "id": "naip-airport",
+      "file": "naip-airport.tif",
+      "licence": "Public domain (US Government work, USDA Farm Service Agency NAIP)",
+      "url": "https://naip-usdaonline.hub.arcgis.com/"
+    },
+    {
+      "id": "naip-shore",
+      "file": "naip-shore.tif",
+      "licence": "Public domain (US Government work, USDA Farm Service Agency NAIP)",
+      "url": "https://naip-usdaonline.hub.arcgis.com/"
+    },
+    {
+      "id": "osm-buildings-airport",
+      "file": "osm-buildings-airport.json",
+      "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "id": "osm-buildings-shore",
+      "file": "osm-buildings-shore.json",
+      "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "id": "osm-relations-airport",
+      "file": "osm-relations-airport.json",
+      "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "id": "osm-relations-shore",
+      "file": "osm-relations-shore.json",
+      "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "id": "osm-airport",
+      "file": "osm-airport.json",
+      "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "id": "osm-bridge",
+      "file": "osm-bridge.json",
+      "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "id": "faa-nasr",
+      "file": "sfo-tower: data/derived/ksfo-airport.json (FAA NASR 28-day cycle, pinned by sfo-tower's checksums)",
+      "licence": "Public domain (US Government work, FAA)",
+      "url": "https://www.faa.gov/air_traffic/flight_info/aeronav/aero_data/NASR_Subscription/"
+    },
+    {
+      "id": "faa-cifp",
+      "file": "sfo-tower: data/derived/ksfo-procedures.json (FAA CIFP, ARINC 424)",
+      "licence": "Public domain (US Government work, FAA)",
+      "url": "https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/cifp/"
+    },
+    {
+      "id": "faa-acd",
+      "file": "sfo-tower: data/derived/aircraft.json (FAA Aircraft Characteristics Database)",
+      "licence": "Public domain (US Government work, FAA)",
+      "url": "https://www.faa.gov/airports/engineering/aircraft_char_database"
+    }
+  ],
+  "terrain": {
+    "land": "terrain-3dep.tif",
+    "sea": "bathy-ncei.tif",
+    "datum": "noaa-datums-9414523.json",
+    "datumStation": "9414523",
+    "aerial": "naip-bay.tif"
+  },
+  "controlPoints": [
+    {
+      "name": "Runway 28R threshold",
+      "lat": 37.61391813,
+      "lon": -122.35805769,
+      "ref": "FAA NASR APT_RWY_END (displaced threshold)"
+    },
+    {
+      "name": "Runway 28L threshold",
+      "lat": 37.6120965,
+      "lon": -122.35926477,
+      "ref": "FAA NASR APT_RWY_END (displaced threshold)"
+    },
+    {
+      "name": "Runway 10L end",
+      "lat": 37.62873872,
+      "lon": -122.39339186,
+      "ref": "FAA NASR APT_RWY_END"
+    },
+    {
+      "name": "Runway 1R threshold",
+      "lat": 37.60769047,
+      "lon": -122.38013927,
+      "ref": "FAA NASR APT_RWY_END (displaced threshold)"
+    },
+    {
+      "name": "Runway 19L end",
+      "lat": 37.62734219,
+      "lon": -122.36711083,
+      "ref": "FAA NASR APT_RWY_END"
+    },
+    {
+      "name": "SFO control tower",
+      "lat": 37.61584,
+      "lon": -122.38376,
+      "ref": "OSM way 554547693 (centroid, gates/lib/controls.mjs)"
+    }
+  ],
+  "vessel": {
+    "name": "Coyote Point harbour launch (stand-in)",
+    "source": "No ferry serves this map: a generic 30 m catamaran stands in for the engine's vessel and stays moored at Coyote Point Marina (DECISIONS D2)",
+    "length": 30,
+    "beam": 9,
+    "draft": 1.5,
+    "topSpeedKn": 25,
+    "hullWidth": 2.4,
+    "hullSpacing": 6.4,
+    "deckY": 2.2,
+    "mass": 60000
+  },
+  "route": {
+    "file": "ferry/route.json",
+    "from": "Coyote Point Marina",
+    "to": "Coyote Point breakwater",
+    "source": "stand-in: a 400 m leg inside the marina (D2)"
+  },
+  "landmarks": [
+    {
+      "slug": "sfo-tower",
+      "name": "SFO Air Traffic Control Tower"
+    },
+    {
+      "slug": "san-mateo-bridge",
+      "name": "San Mateo–Hayward Bridge (west section)"
+    }
+  ],
+  "landmarkScript": "pipelines/landmarks/build.py",
+  "water": {
+    "preset": "bay",
+    "swellDir": [
+      1,
+      0.12
+    ],
+    "optics": {
+      "absorption": [
+        0.5,
+        0.16,
+        0.26
+      ],
+      "scattering": [
+        0.075,
+        0.085,
+        0.055
+      ]
+    }
+  },
+  "sun": {
+    "latitude": 37.61,
+    "declination": -1.9
+  },
+  "palettes": {
+    "walls": {
+      "tower": [
+        [
+          118,
+          138,
+          152
+        ],
+        [
+          104,
+          126,
+          124
+        ],
+        [
+          150,
+          156,
+          162
+        ],
+        [
+          92,
+          104,
+          120
+        ],
+        [
+          186,
+          182,
+          172
+        ],
+        [
+          132,
+          146,
+          160
+        ],
+        [
+          170,
+          168,
+          160
+        ]
+      ],
+      "mid": [
+        [
+          182,
+          178,
+          170
+        ],
+        [
+          160,
+          157,
+          150
+        ],
+        [
+          206,
+          192,
+          162
+        ],
+        [
+          190,
+          170,
+          140
+        ],
+        [
+          150,
+          82,
+          62
+        ],
+        [
+          166,
+          98,
+          72
+        ],
+        [
+          224,
+          220,
+          210
+        ],
+        [
+          198,
+          196,
+          188
+        ],
+        [
+          176,
+          150,
+          120
+        ]
+      ],
+      "house": [
+        [
+          214,
+          226,
+          205
+        ],
+        [
+          238,
+          222,
+          160
+        ],
+        [
+          230,
+          192,
+          190
+        ],
+        [
+          182,
+          206,
+          226
+        ],
+        [
+          240,
+          236,
+          226
+        ],
+        [
+          202,
+          192,
+          222
+        ],
+        [
+          226,
+          206,
+          172
+        ],
+        [
+          168,
+          180,
+          168
+        ],
+        [
+          236,
+          214,
+          196
+        ],
+        [
+          196,
+          216,
+          214
+        ]
+      ],
+      "airport": [
+        [
+          226,
+          228,
+          230
+        ],
+        [
+          212,
+          216,
+          220
+        ],
+        [
+          198,
+          204,
+          210
+        ],
+        [
+          236,
+          236,
+          234
+        ],
+        [
+          176,
+          184,
+          192
+        ]
+      ],
+      "pier": [
+        [
+          222,
+          212,
+          186
+        ],
+        [
+          210,
+          200,
+          178
+        ],
+        [
+          198,
+          194,
+          184
+        ]
+      ]
+    },
+    "roofs": {
+      "city": [
+        [
+          92,
+          92,
+          92
+        ],
+        [
+          118,
+          116,
+          110
+        ],
+        [
+          138,
+          136,
+          128
+        ],
+        [
+          104,
+          100,
+          96
+        ],
+        [
+          156,
+          152,
+          144
+        ]
+      ],
+      "airport": [
+        [
+          168,
+          172,
+          176
+        ],
+        [
+          150,
+          154,
+          158
+        ],
+        [
+          188,
+          190,
+          192
+        ]
+      ]
+    }
+  },
+  "layout": {
+    "anchorUTM": [
+      560165,
+      4160600
+    ],
+    "pier": {
+      "dx": 40,
+      "dzStart": -30,
+      "dzEnd": 30,
+      "deckHeight": 2.0,
+      "width": 6,
+      "headWidth": 10,
+      "headDepth": 6
+    },
+    "boatDock": {
+      "dx": 80,
+      "dz": 0,
+      "heading": 0
+    },
+    "start": {
+      "dx": -60,
+      "dz": 0,
+      "yaw": 1.2
+    }
+  },
+  "places": [],
+  "waypoints": [
+    {
+      "name": "Tower cab",
+      "eye": [
+        -3619,
+        68,
+        -378
+      ],
+      "at": [
+        -1345,
+        20,
+        -174
+      ]
+    },
+    {
+      "name": "28R threshold",
+      "eye": [
+        -1500,
+        60,
+        60
+      ],
+      "at": [
+        4000,
+        500,
+        -2600
+      ]
+    },
+    {
+      "name": "Bayfront Park, Millbrae",
+      "eye": [
+        -3494,
+        6,
+        1019
+      ],
+      "at": [
+        -1345,
+        20,
+        -174
+      ]
+    },
+    {
+      "name": "Coyote Point",
+      "eye": [
+        2165,
+        40,
+        2400
+      ],
+      "at": [
+        -1345,
+        100,
+        -174
+      ]
+    },
+    {
+      "name": "Bridge west landing",
+      "eye": [
+        6859,
+        45,
+        4251
+      ],
+      "at": [
+        -1345,
+        300,
+        -174
+      ]
+    },
+    {
+      "name": "Five miles out",
+      "eye": [
+        6831,
+        520,
+        4174
+      ],
+      "at": [
+        -1345,
+        20,
+        -174
+      ]
+    }
+  ],
+  "ui": {
+    "title": "SFO Approach",
+    "brand": "San Francisco Bay, built from real data",
+    "autopilot": "Marina loop (stand-in vessel)",
+    "autopilotHelp": "No ferry serves this map; the launch stays at Coyote Point.",
+    "howToPlay": "Watch a heavy jet fly the ILS 28R into SFO over the real bay: cameras 1–7, C auto-director, F free camera, T runs the day, R restarts."
+  },
+  "capabilities": [
+    "water",
+    "buildings",
+    "landmarks"
+  ],
+  "games": {
+    "default": "approach",
+    "available": [
+      "approach",
+      "sightseeing"
+    ]
+  },
+  "streaming": false
+}

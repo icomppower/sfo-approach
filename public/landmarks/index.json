@@ -1,0 +1,68 @@
+{
+ "format": "bay-landmarks/1",
+ "lodDistances": [
+  1500,
+  5000
+ ],
+ "blender": "Blender 5.2.1",
+ "landmarks": [
+  {
+   "slug": "sfo-tower",
+   "name": "SFO Air Traffic Control Tower",
+   "anchor": [
+    -3618.621,
+    -378.224
+   ],
+   "ground": 2.18,
+   "lods": [
+    {
+     "name": "sfo-tower_lod0.glb",
+     "triangles": 604,
+     "meshes": 5,
+     "sha256": "ca6ad5c5d7f0c89e3d3cc0d061707bd3be92a97633688b17a5430a695360d4bb"
+    },
+    {
+     "name": "sfo-tower_lod1.glb",
+     "triangles": 340,
+     "meshes": 5,
+     "sha256": "aee30f3c58ec588c36b13ffba7c1ff8816620dc981c3c0b8652b2eaa60569716"
+    },
+    {
+     "name": "sfo-tower_lod2.glb",
+     "triangles": 168,
+     "meshes": 3,
+     "sha256": "3371d800a03db22b21147819fe2b6cda6282355fa7f5948da0eaf63dbac39f68"
+    }
+   ]
+  },
+  {
+   "slug": "san-mateo-bridge",
+   "name": "San Mateo–Hayward Bridge (west section)",
+   "anchor": [
+    7069.287,
+    4315.584
+   ],
+   "ground": 5.32,
+   "lods": [
+    {
+     "name": "san-mateo-bridge_lod0.glb",
+     "triangles": 14696,
+     "meshes": 3,
+     "sha256": "f9f24ef7e7f23b9f0ffb970bf5a0d4c907259e10c12c89ece16e502a48cda5b5"
+    },
+    {
+     "name": "san-mateo-bridge_lod1.glb",
+     "triangles": 8424,
+     "meshes": 3,
+     "sha256": "9f28fc8ce1dac45e2f632cfb48b160b6dc37d8d5bae4745a8b5d0228439148c4"
+    },
+    {
+     "name": "san-mateo-bridge_lod2.glb",
+     "triangles": 2112,
+     "meshes": 2,
+     "sha256": "4360bcc091173e1637c02bdf214e87ea819b151f09fe9e3fa042d2baf3972730"
+    }
+   ]
+  }
+ ]
+}

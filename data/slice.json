@@ -1,0 +1,13 @@
+{
+  "crs": "EPSG:32610 (WGS84 / UTM zone 10N), metres; heights NAVD88 metres",
+  "extent": { "minE": 546000, "minN": 4151000, "maxE": 570000, "maxN": 4175000 },
+  "gridMetres": 6,
+  "bbox": { "south": 37.5033, "west": -122.4795, "north": 37.7211, "east": -122.2057 },
+  "note": "24 km square centred 3.3 km ESE of the 28R threshold: KSFO and its final approach over the bay to 8 NM (the San Mateo–Hayward Bridge west end at 5 NM), Sweeney Ridge and San Bruno Mountain behind the airport",
+  "boxes": {
+    "airport": { "south": 37.595, "west": -122.415, "north": 37.650, "east": -122.350, "utm": { "minE": 551604, "minN": 4161041, "maxE": 557382, "maxN": 4167182 },
+      "note": "SFO, Millbrae, Burlingame bayfront, San Bruno, South San Francisco's southern edge" },
+    "southShore": { "south": 37.545, "west": -122.320, "north": 37.600, "east": -122.240, "utm": { "minE": 560025, "minN": 4155551, "maxE": 567138, "maxN": 4161708 },
+      "note": "Coyote Point, the San Mateo shoreline, Foster City, the bridge's west landing" }
+  }
+}

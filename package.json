@@ -1,0 +1,25 @@
+{
+  "name": "sfo-approach",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "SFO Approach — a Harbor Engine title: a heavy jet flies the ILS 28R into San Francisco International over the real bay (USGS / NOAA / NAIP / OpenStreetMap / FAA data), the flight itself from the SFO Tower simulation.",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5190",
+    "build": "vite build",
+    "preview": "vite preview",
+    "verify": "./verify.sh",
+    "fetch-data": "node pipelines/data/fetch.mjs",
+    "bake": "node node_modules/harbor-engine/tools/terrain/build.mjs && node node_modules/harbor-engine/tools/buildings/build.mjs && node node_modules/harbor-engine/tools/landmarks/build.mjs && node pipelines/aircraft/build.mjs && node pipelines/flight/build.mjs",
+    "engine:update": "node node_modules/harbor-engine/bin/harbor-engine.mjs update"
+  },
+  "dependencies": {
+    "harbor-engine": "github:icomppower/harbor-engine#v1.1.0",
+    "sfo-tower": "github:icomppower/sfo-tower#6141fa032b3ee33fb1a7fb03963ae100a1e8847a"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.12.0",
+    "vite": "^8.3.0"
+  }
+}

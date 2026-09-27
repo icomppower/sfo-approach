@@ -1,0 +1,8 @@
+{
+ "from": { "stopId": "A", "name": "Coyote Point Marina", "x": 2245, "z": 2400 },
+ "to": { "stopId": "B", "name": "Coyote Point breakwater", "x": 2560, "z": 2180 },
+ "rules": { "draft": 1.5, "standIn": true, "note": "No ferry serves this map (DECISIONS D2): a 400 m leg inside the marina keeps the engine's vessel and autopilot valid." },
+ "waypoints": [[2245, 2400], [2400, 2300], [2560, 2180]],
+ "length": 400.0,
+ "minDepthAlong": 0
+}

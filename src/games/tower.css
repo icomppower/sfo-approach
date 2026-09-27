@@ -12,9 +12,9 @@
 .tw-tag b { display: block; } .tw-tag span, .tw-tag i { display: block; font-style: normal; opacity: .9; }
 #tw-ticker { position: absolute; left: 50%; bottom: 118px; transform: translateX(-50%); max-width: 80vw; font-size: 14px; pointer-events: none; }
 #tw-ticker .rb { background: rgba(0,0,0,.6); padding: 6px 12px; border-radius: 6px; color: #dff3ff; } #tw-ticker .alert { background: rgba(120, 20, 30, .8); padding: 6px 12px; border-radius: 6px; color: #fff; font-weight: 700; }
-#tw-scopeWrap { position: absolute; right: 12px; bottom: 118px; width: min(34vw, 380px); aspect-ratio: 1; pointer-events: auto; border: 1px solid rgba(255,255,255,.2); border-radius: 8px; overflow: hidden; background: #050b12; }
+#tw-scopeWrap { position: absolute; right: 64px; bottom: 118px; width: min(34vw, 380px); aspect-ratio: 1; pointer-events: auto; border: 1px solid rgba(255,255,255,.2); border-radius: 8px; overflow: hidden; background: #050b12; }
 #tw-scope { width: 100%; height: 100%; display: block; }
-#tw-range { position: absolute; top: 6px; right: 6px; display: flex; gap: 4px; } #tw-range button { padding: 2px 6px; font-size: 11px; }
+#tw-range { position: absolute; top: 6px; left: 6px; display: flex; gap: 4px; } #tw-range button { padding: 2px 6px; font-size: 11px; }
 #tw-cmdbar { position: absolute; left: 0; right: 0; bottom: 0; background: rgba(6, 10, 16, .78); backdrop-filter: blur(8px); padding: 8px 12px; pointer-events: auto; min-height: 96px; }
 #tw-cmdbar .sel { font-size: 13px; margin-bottom: 6px; } #tw-cmdbar .sel .dim { opacity: .6; } #tw-cmdbar .sel b { font-size: 15px; color: #fff; }
 #tw-cmdRow, #tw-picker { display: flex; flex-wrap: wrap; gap: 6px; } #tw-picker { margin-top: 6px; } #tw-picker:not(.open) { display: none; }
@@ -28,5 +28,5 @@
 .tw-game .card button.primary { background: #ffcf5a; color: #10161f; border-color: #ffcf5a; font-weight: 700; padding: 8px 16px; }
 .tw-game .card input { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); color: #fff; border-radius: 6px; padding: 5px 8px; font: inherit; width: 90px; }
 .tw-game .card a { color: #ffcf5a; }
-@media (max-width: 640px) { #tw-hud { right: 0; font-size: 11px; gap: 4px 6px; padding: 6px 8px; } #tw-hud .opt, #tw-atis { display: none; } #tw-scopeWrap { width: 42vw; bottom: 150px; } #tw-ticker { bottom: 150px; font-size: 12px; } #tw-cmdbar { min-height: 120px; } .tw-tag { font-size: 10px; } }
+@media (max-width: 640px) { #tw-scopeWrap { right: 8px; } #tw-hud { right: 0; font-size: 11px; gap: 4px 6px; padding: 6px 8px; } #tw-hud .opt, #tw-atis { display: none; } #tw-scopeWrap { width: 42vw; bottom: 150px; } #tw-ticker { bottom: 150px; font-size: 12px; } #tw-cmdbar { min-height: 120px; } .tw-tag { font-size: 10px; } }
 html.is-touch .tw-game .tc, html.is-touch .tc-top { display: none !important; }

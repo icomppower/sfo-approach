@@ -38,7 +38,8 @@ export class Fleet {
     this.types = simIndex.types;
     await Promise.all(Object.entries(aircraftIndex.fleet).map(async ([cls, def]) => {
       const lods = await Promise.all(def.lods.map(async (l) => { const r = await fetch(base + 'aircraft/' + l.name); if (!r.ok) throw new Error(`fleet: ${l.name} HTTP ${r.status}`); return mergedGeometry(await r.arrayBuffer()); }));
-      this.classes[cls] = { lods, lengthM: def.length, spanM: def.span, ref: def.ref };
+      this.classes[cls] = { lods, lengthM: def.lengthM, spanM: def.spanM, ref: def.ref };
+      if (!(def.lengthM > 0 && def.spanM > 0)) throw new Error(`fleet: class ${cls} has no reference dimensions`);
     }));
     return this;
   }

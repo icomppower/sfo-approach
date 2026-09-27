@@ -72,7 +72,7 @@ export class Tower {
   applyWeather() {
     const app = this.app, w = this.shift.weather.current;
     const visKm = (w.vis ?? 10) * 1.609;
-    if (app.haze) app.haze.density.value = MathUtils.clamp(20 / Math.max(0.8, visKm), 0.6, 4.5);
+    if (app.haze) app.haze.density.value = MathUtils.clamp(16 / Math.max(0.8, visKm), 0.5, 3.5);
     if (app.clouds) app.clouds.coverage.value = w.conditions === 'VISUAL' ? (w.ceil ? 0.45 : 0.25) : w.conditions === 'MARGINAL' ? 0.7 : 0.92;
   }
   endShift() {

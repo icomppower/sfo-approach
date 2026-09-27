@@ -1,1 +1,1 @@
-{ "required": ["a0", "a1", "a2", "a3", "a4"], "advisory": ["a5"] }
+{"required": ["a0", "a1", "a2", "a3", "a4", "b0", "b1", "b3", "b4", "b5"], "advisory": ["a5", "b6"]}

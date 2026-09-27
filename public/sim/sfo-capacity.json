@@ -1,0 +1,129 @@
+{
+ "generated": "tools/derive-capacity.mjs",
+ "source": "FAA Airport Capacity Profile: San Francisco International Airport (2019), data Dec 2017–Nov 2018 (ASPM)",
+ "weatherDefinitions": {
+  "VISUAL": " Ceiling and visibility allow for visual approaches: at least 3500 feet ceiling and 8 miles visibility",
+  "MARGINAL": " Ceiling and visibility below visual approach minima but better than Instrument conditions",
+  "INSTRUMENT": " Ceiling and visibility below 1000 feet ceiling or 3 miles visibility"
+ },
+ "note": "Rates are total operations per hour (arrivals + departures). In the balanced West Plan roughly half are arrivals.",
+ "configurations": [
+  {
+   "weather": "VISUAL",
+   "configuration": "28/01 SIDE-BYES",
+   "separation": "VISUAL APPROACHES, VISUAL SEPARATION",
+   "arrivalRunways": [
+    "28L",
+    "28R"
+   ],
+   "departureRunways": [
+    "01L",
+    "01R",
+    "28L"
+   ],
+   "facilityReportedOpsPerHour": 104,
+   "modelEstimatedOpsPerHour": 107,
+   "rangeOpsPerHour": [
+    104,
+    107
+   ]
+  },
+  {
+   "weather": "VISUAL",
+   "configuration": "28RT STAGGER-BYES",
+   "separation": "INSTRUMENT APPROACHES, RADAR SEPARATION",
+   "arrivalRunways": [
+    "28L",
+    "28R"
+   ],
+   "departureRunways": [
+    "28L",
+    "28R"
+   ],
+   "facilityReportedOpsPerHour": 85,
+   "modelEstimatedOpsPerHour": 83,
+   "rangeOpsPerHour": [
+    83,
+    85
+   ]
+  },
+  {
+   "weather": "MARGINAL",
+   "configuration": "28/01 SIDE-BYES",
+   "separation": "INSTRUMENT APPROACH, VISUAL SEPARATION",
+   "arrivalRunways": [
+    "28L",
+    "28R"
+   ],
+   "departureRunways": [
+    "01L",
+    "01R",
+    "28L"
+   ],
+   "facilityReportedOpsPerHour": 93,
+   "modelEstimatedOpsPerHour": 98,
+   "rangeOpsPerHour": [
+    93,
+    98
+   ]
+  },
+  {
+   "weather": "MARGINAL",
+   "configuration": "28RT STAGGER-BYES",
+   "separation": "INSTRUMENT APPROACH, RADAR SEPARATION",
+   "arrivalRunways": [
+    "28L",
+    "28R"
+   ],
+   "departureRunways": [
+    "28L",
+    "28R"
+   ],
+   "facilityReportedOpsPerHour": 85,
+   "modelEstimatedOpsPerHour": 83,
+   "rangeOpsPerHour": [
+    83,
+    89
+   ]
+  },
+  {
+   "weather": "INSTRUMENT",
+   "configuration": "28/01 INTRAIL",
+   "separation": "INSTRUMENT APPROACHES, RADAR SEPARATION",
+   "arrivalRunways": [
+    "28L",
+    "28R"
+   ],
+   "departureRunways": [
+    "01L",
+    "01R",
+    "28L"
+   ],
+   "facilityReportedOpsPerHour": 78,
+   "modelEstimatedOpsPerHour": 76,
+   "rangeOpsPerHour": [
+    76,
+    78
+   ]
+  },
+  {
+   "weather": "INSTRUMENT",
+   "configuration": "28RT INTRAIL",
+   "separation": "INSTRUMENT APPROACHES, RADAR SEPARATION",
+   "arrivalRunways": [
+    "28L",
+    "28R"
+   ],
+   "departureRunways": [
+    "28L",
+    "28R"
+   ],
+   "facilityReportedOpsPerHour": 74,
+   "modelEstimatedOpsPerHour": 71,
+   "rangeOpsPerHour": [
+    71,
+    74
+   ]
+  }
+ ]
+}

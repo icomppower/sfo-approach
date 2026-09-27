@@ -1,0 +1,360 @@
+{
+ "format": "sfo-sim/1",
+ "source": "sfo-tower data/derived (FAA NASR, CIFP, ACD; IEM METAR; BTS)",
+ "sfoTower": "0.1.0",
+ "files": {
+  "ksfo-airport.json": "1865d4c74336ca98268a3eb7b2db9a85049e4de8bb29b20cf2b7d0cc87a92e77",
+  "ksfo-procedures.json": "51039f5bc0e6f8dc3426fe84bcd88d441e3fc8d0ae935ab57ea0b0c4bf870406",
+  "ksfo-metar.min.json": "2a0c6a9fc61709e1a0b7b9fdcb820646a148c991fa909aa7cc626e2290d179e0",
+  "ksfo-traffic.json": "eab955687a6e469e7cca61219717d968b7473f0b60a0fea02b0c6ee20ea6d74b",
+  "aircraft.json": "feaebf3f5b259e3b632eca31b8bcacef6318feeb4ac2859382da16cc2b7a3bea",
+  "sfo-capacity.json": "8b8be3d34ce645d8c49b02cf8f26e97a988ad69ca7cc261c5f0bcd593d0c971d"
+ },
+ "classes": {
+  "heavy2": {
+   "ref": "B772",
+   "lengthM": 63.7,
+   "spanM": 60.9
+  },
+  "heavy4": {
+   "ref": "B744",
+   "lengthM": 70.7,
+   "spanM": 64.4
+  },
+  "narrow": {
+   "ref": "B738",
+   "lengthM": 39.5,
+   "spanM": 35.8
+  },
+  "rearjet": {
+   "ref": "CRJ9",
+   "lengthM": 36.2,
+   "spanM": 24.9
+  },
+  "turboprop2": {
+   "ref": "DH8D",
+   "lengthM": 32.8,
+   "spanM": 28.4
+  },
+  "turboprop1": {
+   "ref": "PC12",
+   "lengthM": 14.4,
+   "spanM": 16.3
+  },
+  "light": {
+   "ref": "C172",
+   "lengthM": 8.3,
+   "spanM": 11
+  }
+ },
+ "types": {
+  "A20N": {
+   "cls": "narrow",
+   "lengthM": 37.6,
+   "spanM": 35.8,
+   "heavy": false,
+   "model": "Airbus A320 Neo"
+  },
+  "A21N": {
+   "cls": "narrow",
+   "lengthM": 44.5,
+   "spanM": 35.8,
+   "heavy": false,
+   "model": "Airbus A321 Neo"
+  },
+  "A306": {
+   "cls": "heavy2",
+   "lengthM": 54.1,
+   "spanM": 44.8,
+   "heavy": true,
+   "model": "Airbus A300 B4-600"
+  },
+  "A319": {
+   "cls": "narrow",
+   "lengthM": 33.8,
+   "spanM": 35.8,
+   "heavy": false,
+   "model": "Airbus A319"
+  },
+  "A320": {
+   "cls": "narrow",
+   "lengthM": 37.6,
+   "spanM": 35.8,
+   "heavy": false,
+   "model": "Airbus A320"
+  },
+  "A321": {
+   "cls": "narrow",
+   "lengthM": 44.5,
+   "spanM": 35.8,
+   "heavy": false,
+   "model": "Airbus A321"
+  },
+  "A332": {
+   "cls": "heavy2",
+   "lengthM": 59,
+   "spanM": 60.3,
+   "heavy": true,
+   "model": "Airbus A330-200"
+  },
+  "A333": {
+   "cls": "heavy2",
+   "lengthM": 63.7,
+   "spanM": 60.3,
+   "heavy": true,
+   "model": "Airbus A330-300"
+  },
+  "A339": {
+   "cls": "heavy2",
+   "lengthM": 63.7,
+   "spanM": 64,
+   "heavy": true,
+   "model": "Airbus A330-900"
+  },
+  "A359": {
+   "cls": "heavy2",
+   "lengthM": 66.6,
+   "spanM": 64.7,
+   "heavy": true,
+   "model": "Airbus 350-900"
+  },
+  "A35K": {
+   "cls": "heavy2",
+   "lengthM": 73.6,
+   "spanM": 64.7,
+   "heavy": true,
+   "model": "Airbus A350-1000 XWB"
+  },
+  "A388": {
+   "cls": "heavy4",
+   "lengthM": 72.7,
+   "spanM": 79.8,
+   "heavy": true,
+   "model": "Airbus A380-800"
+  },
+  "B38M": {
+   "cls": "narrow",
+   "lengthM": 39.5,
+   "spanM": 35.9,
+   "heavy": false,
+   "model": "Boeing 737 MAX 8"
+  },
+  "B39M": {
+   "cls": "narrow",
+   "lengthM": 42.2,
+   "spanM": 35.9,
+   "heavy": false,
+   "model": "Boeing 737 MAX 9"
+  },
+  "B712": {
+   "cls": "rearjet",
+   "lengthM": 37.8,
+   "spanM": 28.4,
+   "heavy": false,
+   "model": "Boeing 717-200"
+  },
+  "B737": {
+   "cls": "narrow",
+   "lengthM": 33.6,
+   "spanM": 35.8,
+   "heavy": false,
+   "model": "Boeing 737-700"
+  },
+  "B738": {
+   "cls": "narrow",
+   "lengthM": 39.5,
+   "spanM": 35.8,
+   "heavy": false,
+   "model": "Boeing 737-800"
+  },
+  "B739": {
+   "cls": "narrow",
+   "lengthM": 42.1,
+   "spanM": 35.8,
+   "heavy": false,
+   "model": "Boeing 737-900"
+  },
+  "B744": {
+   "cls": "heavy4",
+   "lengthM": 70.7,
+   "spanM": 59.6,
+   "heavy": true,
+   "model": "Boeing 747-400"
+  },
+  "B748": {
+   "cls": "heavy4",
+   "lengthM": 76.3,
+   "spanM": 68.4,
+   "heavy": true,
+   "model": "Boeing 747-8"
+  },
+  "B752": {
+   "cls": "narrow",
+   "lengthM": 47.3,
+   "spanM": 41.1,
+   "heavy": false,
+   "model": "Boeing 757-200"
+  },
+  "B762": {
+   "cls": "heavy2",
+   "lengthM": 48.5,
+   "spanM": 47.6,
+   "heavy": true,
+   "model": "Boeing 767-200"
+  },
+  "B763": {
+   "cls": "heavy2",
+   "lengthM": 55,
+   "spanM": 50.9,
+   "heavy": true,
+   "model": "Boeing 767-300"
+  },
+  "B772": {
+   "cls": "heavy2",
+   "lengthM": 63.7,
+   "spanM": 60.9,
+   "heavy": true,
+   "model": "Boeing 777-200"
+  },
+  "B77W": {
+   "cls": "heavy2",
+   "lengthM": 73.9,
+   "spanM": 64.8,
+   "heavy": true,
+   "model": "Boeing 777-300ER"
+  },
+  "B788": {
+   "cls": "heavy2",
+   "lengthM": 56.7,
+   "spanM": 60.1,
+   "heavy": true,
+   "model": "Boeing 787-8 BBJ/Dreamliner"
+  },
+  "B789": {
+   "cls": "heavy2",
+   "lengthM": 62.8,
+   "spanM": 60.1,
+   "heavy": true,
+   "model": "Boeing 787-9 Dreamliner"
+  },
+  "B78X": {
+   "cls": "heavy2",
+   "lengthM": 68.3,
+   "spanM": 60.1,
+   "heavy": true,
+   "model": "Boeing 787-10 Dreamliner"
+  },
+  "BCS1": {
+   "cls": "narrow",
+   "lengthM": 35,
+   "spanM": 35.1,
+   "heavy": false,
+   "model": "Airbus A220-100"
+  },
+  "BCS3": {
+   "cls": "narrow",
+   "lengthM": 38.7,
+   "spanM": 35.1,
+   "heavy": false,
+   "model": "Airbus A220-300"
+  },
+  "C172": {
+   "cls": "light",
+   "lengthM": 8.3,
+   "spanM": 11,
+   "heavy": false,
+   "model": "Cessna Skyhawk 172/Cutlass"
+  },
+  "C208": {
+   "cls": "turboprop1",
+   "lengthM": 11.5,
+   "spanM": 15.9,
+   "heavy": false,
+   "model": "Cessna 208 Caravan 1"
+  },
+  "C56X": {
+   "cls": "rearjet",
+   "lengthM": 15.8,
+   "spanM": 17.2,
+   "heavy": false,
+   "model": "Cessna Excel/XLS"
+  },
+  "CL60": {
+   "cls": "rearjet",
+   "lengthM": 20.8,
+   "spanM": 19.6,
+   "heavy": false,
+   "model": "Canadair Challenger 600/601/604"
+  },
+  "CRJ2": {
+   "cls": "rearjet",
+   "lengthM": 26.8,
+   "spanM": 20.9,
+   "heavy": false,
+   "model": "canadair CRJ-200"
+  },
+  "CRJ7": {
+   "cls": "rearjet",
+   "lengthM": 32.5,
+   "spanM": 23.3,
+   "heavy": false,
+   "model": "canadair CRJ-700"
+  },
+  "CRJ9": {
+   "cls": "rearjet",
+   "lengthM": 36.2,
+   "spanM": 24.8,
+   "heavy": false,
+   "model": "canadair CRJ-900"
+  },
+  "DH8D": {
+   "cls": "turboprop2",
+   "lengthM": 32.9,
+   "spanM": 28.4,
+   "heavy": false,
+   "model": "DeHavilland Canada 8/DHC8-400"
+  },
+  "E170": {
+   "cls": "narrow",
+   "lengthM": 29.9,
+   "spanM": 26,
+   "heavy": false,
+   "model": "Embraer 170"
+  },
+  "E190": {
+   "cls": "narrow",
+   "lengthM": 36.2,
+   "spanM": 28.7,
+   "heavy": false,
+   "model": "Embraer 190"
+  },
+  "E75L": {
+   "cls": "narrow",
+   "lengthM": 32.3,
+   "spanM": 31,
+   "heavy": false,
+   "model": "Embraer 175 long wing"
+  },
+  "GLF5": {
+   "cls": "rearjet",
+   "lengthM": 29.4,
+   "spanM": 28.5,
+   "heavy": false,
+   "model": "Gulfstream V"
+  },
+  "MD11": {
+   "cls": "heavy2",
+   "lengthM": 61.6,
+   "spanM": 52,
+   "heavy": true,
+   "model": "Boeing (Douglas) MD 11"
+  },
+  "PC12": {
+   "cls": "turboprop1",
+   "lengthM": 14.4,
+   "spanM": 16.2,
+   "heavy": false,
+   "model": "Pilatus PC-12"
+  }
+ }
+}

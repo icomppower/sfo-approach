@@ -272,6 +272,151 @@ def nose_gear(B, lod):
     # landing lights on the nose gear
     B.box('nav_white', (0, gy + 0.4, 1.6), (0.5, 0.2, 0.3))
 
+def export(B, name, lod):
+    B.build(f'{name}_lod{lod}')
+    path = os.path.join(OUT, f'{name}_lod{lod}.glb')
+    bpy.ops.export_scene.gltf(filepath=path, export_format='GLB', export_yup=True, export_apply=True,
+                              export_materials='EXPORT', export_texcoords=False, export_normals=True,
+                              export_extras=False, export_cameras=False, export_lights=False, use_selection=False)
+    print('wrote', path)
+
+# ---------------------------------------------------------------- the fleet: generic silhouettes (Phase 3, SPEC B0)
+# One parametric airliner per class at a reference type's published dimensions (FAA ACD); the game scales each
+# instance to its own type's length and span. Origin: ground point under the main gear; nose toward +Y.
+FLEET = {
+    # class: length, span, fuselage radius, gear height, nose→main-gear (fraction of length), wing root LE (fraction),
+    #        sweep°, dihedral°, engines (list of (spanwise fraction, kind)), tail: 'low' | 'T', wing: 'low' | 'high',
+    #        prop: bool, reference type
+    'heavy2':    dict(ref='B772', length=63.7, span=60.9, r=3.1, gear=5.0, mg=0.565, root=0.37, sweep=31.6, dih=6.0, engines=[(0.30, 'wing')], tail='low', wing='low', prop=False),
+    'heavy4':    dict(ref='B744', length=70.7, span=64.4, r=3.25, gear=5.2, mg=0.56, root=0.36, sweep=37.5, dih=7.0, engines=[(0.30, 'wing'), (0.53, 'wing')], tail='low', wing='low', prop=False),
+    'narrow':    dict(ref='B738', length=39.5, span=35.8, r=1.9, gear=3.2, mg=0.56, root=0.40, sweep=25.0, dih=6.0, engines=[(0.32, 'wing')], tail='low', wing='low', prop=False),
+    'rearjet':   dict(ref='CRJ9', length=36.2, span=24.9, r=1.35, gear=2.4, mg=0.58, root=0.45, sweep=27.0, dih=3.0, engines=[(0.0, 'rear')], tail='T', wing='low', prop=False),
+    'turboprop2': dict(ref='DH8D', length=32.8, span=28.4, r=1.4, gear=2.6, mg=0.52, root=0.40, sweep=2.0, dih=2.5, engines=[(0.32, 'wing')], tail='T', wing='high', prop=True),
+    'turboprop1': dict(ref='PC12', length=14.4, span=16.3, r=0.9, gear=1.6, mg=0.50, root=0.40, sweep=2.0, dih=4.0, engines=[(0.0, 'nose')], tail='low', wing='low', prop=True),
+    'light':     dict(ref='C172', length=8.3, span=11.0, r=0.65, gear=1.1, mg=0.45, root=0.30, sweep=0.0, dih=1.5, engines=[(0.0, 'nose')], tail='low', wing='high', prop=True),
+}
+
+def generic(P, lod):
+    B = Builder()
+    L, S, R0, G = P['length'], P['span'], P['r'], P['gear']
+    cl = G + R0                       # centreline height above the ground
+    nose_y = L * P['mg']              # main gear at y = 0
+    seg = 28 if lod == 0 else 14 if lod == 1 else 8
+    # fuselage: ogive nose (12 % of length), constant section, upswept tail cone (22 %)
+    prof = []
+    for s, k, dz, sq in [(0.0, 0.05, -0.12, 0), (0.02, 0.28, -0.1, 0), (0.05, 0.55, -0.07, 0), (0.09, 0.82, -0.03, 0), (0.13, 1.0, 0, 0), (0.4, 1.0, 0, 0), (0.7, 1.0, 0, 0), (0.78, 1.0, 0, 0),
+                         (0.84, 0.9, 0.1, 0.15), (0.9, 0.7, 0.28, 0.3), (0.95, 0.45, 0.45, 0.4), (0.985, 0.2, 0.62, 0.3), (1.0, 0.05, 0.7, 0)]:
+        prof.append((s * L, k, dz * R0 * 2.2, sq))
+    if lod == 2: prof = [p for i, p in enumerate(prof) if i % 2 == 0 or i == len(prof) - 1]
+    rings = [ring(nose_y - s, cl + dz, R0 * k, R0 * k, seg, phase=math.pi / seg, squash_bottom=sq) for s, k, dz, sq in prof]
+    B.loft('white', rings, close_start=True, close_end=True, smooth=True)
+    if lod < 2:
+        # belly / cheatline shells and cockpit glass, as on the 777 model
+        shell = lambda r, k: [(x * k, y, cl + (z - cl) * k) for x, y, z in r]
+        def partial(mat, zlo, zhi, k, s0, s1):
+            pts, faces = [], []
+            rs = [shell(r, k) for r in rings]; n = len(rs[0])
+            for ri in range(len(rs) - 1):
+                for i in range(n):
+                    quad = [rs[ri][i], rs[ri][(i + 1) % n], rs[ri + 1][(i + 1) % n], rs[ri + 1][i]]
+                    zc = sum(p[2] for p in quad) / 4
+                    if zlo <= zc < zhi and s0 <= nose_y - quad[0][1] <= s1:
+                        o = len(pts); pts.extend(quad); faces.append((o, o + 1, o + 2, o + 3))
+            if faces: B.add(mat, pts, faces, True)
+        partial('belly', -99, cl - R0 * 0.5, 1.006, L * 0.12, L * 0.85)
+        partial('blue', cl - R0 * 0.5, cl - R0 * 0.3, 1.006, L * 0.12, L * 0.85)
+        pts, faces = [], []
+        for si in range(len(prof) - 1):
+            s0, s1 = prof[si][0], prof[si + 1][0]
+            if not (L * 0.04 <= s0 and s1 <= L * 0.1): continue
+            r0, r1 = rings[si], rings[si + 1]; n = len(r0)
+            for i in range(n):
+                a = (2 * math.pi * i / n + math.pi / n) % (2 * math.pi)
+                up = abs(((a - math.pi / 2 + math.pi) % (2 * math.pi)) - math.pi)
+                if math.radians(22) <= up <= math.radians(72):
+                    quad = [r0[i], r0[(i + 1) % n], r1[(i + 1) % n], r1[i]]
+                    quad = [(x * 1.012, y, cl + (z - cl) * 1.012) for x, y, z in quad]
+                    o = len(pts); pts.extend(quad); faces.append((o, o + 1, o + 2, o + 3))
+        if faces: B.add('glass', pts, faces, True)
+    # wing
+    high = P['wing'] == 'high'
+    zw = cl + (R0 * 0.85 if high else -R0 * 0.45)
+    half = S / 2; root_x = R0 * 0.85; root_s = L * P['root']
+    root_c = L * (0.19 if not P['prop'] else 0.16); tip_c = root_c * 0.28; kink_x = half * 0.35
+    sweep = math.tan(math.radians(P['sweep'])); dih = math.tan(math.radians(P['dih'])) * (-1 if high else 1)
+    n = 10 if lod == 0 else 7 if lod == 1 else 5
+    xs = [root_x, kink_x, half * 0.7, half] if lod < 2 else [root_x, kink_x, half]
+    def chord_at(x): return root_c + (tip_c - root_c) * (x - root_x) / (half - root_x) if x > kink_x else root_c + (root_c * 0.65 - root_c) * (x - root_x) / max(1e-6, kink_x - root_x)
+    for side in (-1, 1):
+        rs = []
+        for x in xs:
+            c = chord_at(x); le = root_s + (x - root_x) * sweep; th = 0.13 - 0.05 * (x - root_x) / (half - root_x)
+            rs.append([(side * x, nose_y - le + dy, zw + (x - root_x) * dih + dz) for dy, dz in airfoil(c, th, 0.025, n)])
+        B.loft('wing', rs, close_end=True, smooth=True)
+        # engines
+        for frac, kind in P['engines']:
+            if kind == 'wing':
+                ex = half * frac; le = nose_y - (root_s + (ex - root_x) * sweep); zwing = zw + (ex - root_x) * dih
+                if P['prop']:
+                    nr = R0 * 0.45; ecy, ecz = le + 1.2, zwing + (0.0 if high else 0.1)
+                    B.loft('nacelle', [ring(ecy - s, ecz, r, r, seg // 2 or 4) for s, r in [(0, nr * 0.6), (0.5, nr), (2.5, nr), (4.0, nr * 0.7), (4.8, nr * 0.4)]], close_start=True, close_end=True, smooth=True)
+                    if lod < 2:
+                        pr = S * 0.075
+                        B.box('dark', (side * ex, ecy + 0.15, ecz), (pr * 2, 0.1, 0.3))
+                        B.box('dark', (side * ex, ecy + 0.15, ecz), (0.3, 0.1, pr * 2))
+                else:
+                    nr = R0 * 0.62; ecy, ecz = le + nr * 1.4, zwing - nr * 1.15
+                    nac = [(0.0, nr * 0.8), (0.15, nr * 0.95), (0.5, nr), (2.2, nr * 0.97), (3.3, nr * 0.85), (3.9, nr * 0.68)]
+                    if lod == 2: nac = [nac[0], nac[2], nac[5]]
+                    B.loft('nacelle', [ring(ecy - s * nr, ecz, r, r, seg) for s, r in nac], smooth=True)
+                    B.loft('dark', [ring(ecy, ecz, nr * 0.8, nr * 0.8, seg), ring(ecy - 0.4 * nr, ecz, nr * 0.7, nr * 0.7, seg)], close_end=True, smooth=True)
+                    B.loft('dark', [ring(ecy - 3.9 * nr, ecz, nr * 0.68, nr * 0.68, seg), ring(ecy - 4.6 * nr, ecz, nr * 0.35, nr * 0.35, seg), ring(ecy - 5.4 * nr, ecz, nr * 0.1, nr * 0.1, seg)], close_end=True, smooth=True)
+                    B.box('wing', (side * ex, ecy - 2.2 * nr, (ecz + zwing) / 2), (nr * 0.35, nr * 2.4, max(0.3, zwing - ecz - nr * 0.2)))
+            elif kind == 'rear' and side > 0:
+                for sd in (-1, 1):
+                    nr = R0 * 0.55; ecy = nose_y - L * 0.80; ecz = cl + R0 * 0.35; ex = R0 + nr * 1.1
+                    B.loft('nacelle', [ring(ecy - s * nr, ecz, r, r, seg) for s, r in [(0, nr * 0.85), (0.4, nr), (2.5, nr), (3.6, nr * 0.7)]], close_start=True, close_end=True, smooth=True)
+                    B.box('white', (sd * (R0 + nr * 0.4), ecy - 1.6 * nr, ecz), (nr * 1.0, nr * 2.0, nr * 0.6))
+                    # shift the nacelle to its side: loft used x=0 ring centre, so add a per-side offset by rebuilding
+                    v, f, sm = B.parts['nacelle']
+                    for i in range(len(v) - 4 * seg, len(v)): v[i] = (v[i][0] + sd * ex, v[i][1], v[i][2])
+            elif kind == 'nose' and side > 0:
+                nr = R0 * 0.55
+                B.loft('dark', [ring(nose_y + 0.3, cl - R0 * 0.15, r, r, seg // 2 or 4) for r in (0.08,)] + [ring(nose_y + 0.25, cl - R0 * 0.15, nr * 0.35, nr * 0.35, seg // 2 or 4)], close_start=True, smooth=True)
+                if lod < 2:
+                    pr = S * 0.09
+                    B.box('dark', (0, nose_y + 0.32, cl - R0 * 0.15), (pr * 2, 0.08, 0.25))
+                    B.box('dark', (0, nose_y + 0.32, cl - R0 * 0.15), (0.25, 0.08, pr * 2))
+        # navigation light at the tip
+        tipy = nose_y - (root_s + (half - root_x) * sweep) - tip_c * 0.3
+        B.box('nav_red' if side < 0 else 'nav_green', (side * (half - 0.15), tipy, zw + (half - root_x) * dih), (0.25, 0.4, 0.2))
+    # tail
+    ts = L * 0.86; fin_h = R0 * (2.6 if P['tail'] == 'T' else 3.0); fin_rc = L * 0.16; fin_tc = fin_rc * 0.4
+    fs = math.tan(math.radians(min(45, P['sweep'] + 8)))
+    nf = 7 if lod < 2 else 5
+    rings_f = [[(dz, nose_y - (ts + z * fs) + dy, cl + R0 * 0.9 + z) for dy, dz in airfoil(fin_rc + (fin_tc - fin_rc) * z / fin_h, 0.09, 0.0, nf)] for z in ((0.0, fin_h * 0.5, fin_h) if lod == 0 else (0.0, fin_h))]
+    B.loft('blue', rings_f, close_end=True, smooth=True)
+    hs = S * 0.36 / 2; h_rc = L * 0.09; h_tc = h_rc * 0.45
+    hz = cl + R0 * 0.9 + fin_h - 0.15 if P['tail'] == 'T' else cl + R0 * 0.25
+    hstation = ts + (fin_h * fs if P['tail'] == 'T' else L * 0.03)
+    for side in (-1, 1):
+        rs = [[(side * x, nose_y - (hstation + (x - 0.3) * fs * 0.9) + dy, hz + (x - 0.3) * math.tan(math.radians(5)) + dz) for dy, dz in airfoil(h_rc + (h_tc - h_rc) * (x - 0.3) / (hs - 0.3), 0.09, 0.0, nf)] for x in ((0.3, hs * 0.55, hs) if lod == 0 else (0.3, hs))]
+        B.loft('wing', rs, close_end=True, smooth=True)
+    B.box('nav_white', (0, nose_y - L + 0.2, cl + R0 * 0.7), (0.25, 0.25, 0.25))
+    B.box('beacon', (0, nose_y - L * 0.45, cl + R0 + 0.05), (0.25, 0.4, 0.2))
+    # gear
+    if lod < 2:
+        wr = max(0.25, R0 * 0.2); gx = max(0.6, R0 * 1.6 if not high else R0 * 1.2)
+        for side in (-1, 1):
+            B.box('metal', (side * gx, 0, (zw if not high else cl - R0 * 0.6) / 2 + wr), (wr * 0.6, wr * 0.6, max(0.4, (zw if not high else cl - R0 * 0.6) - wr)))
+            for ay in ((-wr * 1.6, wr * 1.6) if R0 > 2.2 else (0.0,)):
+                for wx in (-wr * 0.9, wr * 0.9) if R0 > 1.2 else (0.0,):
+                    B.loft('tyre', [[(side * gx + wx - wr * 0.3, ay + math.cos(a) * wr, wr + math.sin(a) * wr) for a in [2 * math.pi * i / 8 for i in range(8)]], [(side * gx + wx + wr * 0.3, ay + math.cos(a) * wr, wr + math.sin(a) * wr) for a in [2 * math.pi * i / 8 for i in range(8)]]], close_start=True, close_end=True, smooth=True)
+        ny = nose_y - L * 0.14; nwr = wr * 0.8
+        B.box('metal', (0, ny, (cl - R0 * 0.5) / 2 + nwr), (nwr * 0.6, nwr * 0.6, max(0.4, cl - R0 * 0.5 - nwr)))
+        B.loft('tyre', [[(-nwr * 0.3, ny + math.cos(a) * nwr, nwr + math.sin(a) * nwr) for a in [2 * math.pi * i / 8 for i in range(8)]], [(nwr * 0.3, ny + math.cos(a) * nwr, nwr + math.sin(a) * nwr) for a in [2 * math.pi * i / 8 for i in range(8)]]], close_start=True, close_end=True, smooth=True)
+    return B
+
 for lod in (0, 1, 2):
     bpy.ops.wm.read_factory_settings(use_empty=True)
     make_materials()
@@ -280,9 +425,9 @@ for lod in (0, 1, 2):
     for side in (-1, 1): wing(B, lod, side)
     tail(B, lod)
     nose_gear(B, lod)
-    B.build(f'b77w_lod{lod}')
-    path = os.path.join(OUT, f'b77w_lod{lod}.glb')
-    bpy.ops.export_scene.gltf(filepath=path, export_format='GLB', export_yup=True, export_apply=True,
-                              export_materials='EXPORT', export_texcoords=False, export_normals=True,
-                              export_extras=False, export_cameras=False, export_lights=False, use_selection=False)
-    print('wrote', path)
+    export(B, 'b77w', lod)
+for name, P in FLEET.items():
+    for lod in (0, 1, 2):
+        bpy.ops.wm.read_factory_settings(use_empty=True)
+        make_materials()
+        export(generic(P, lod), 'fleet_' + name, lod)

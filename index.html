@@ -11,6 +11,8 @@
 	<style>
 		html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
 		#app, #app canvas { display: block; }
+		.loader-modes { display: flex; gap: 10px; margin: 8px 0 12px; flex-wrap: wrap; }
+		.loader-modes a { color: #ffcf5a; text-decoration: none; border: 1px solid rgba(255,207,90,.5); border-radius: 8px; padding: 6px 12px; font: 600 13px/1.3 Inter, system-ui, sans-serif; }
 			</style>
 </head>
 <body>
@@ -30,6 +32,7 @@
 					<span class="loader-meta"><span class="loader-pct">0%</span><span class="loader-time">0:00</span></span>
 				</div>
 				<div class="loader-bar"><div class="loader-fill"></div><div class="loader-glint"></div></div>
+				<div class="loader-modes"><a href="?game=approach">✈️ Watch the approach · 觀看進場</a><a href="?game=tower">🛩️ Control the tower · 指揮塔台</a></div>
 				<div class="loader-note">The first launch compiles the shaders and can take a minute or two. Later visits load much faster.</div>
 				<div class="loader-tips">
 					<span class="loader-tip-label">Tip</span>

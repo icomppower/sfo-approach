@@ -1,5 +1,5 @@
 {
- "format": "sfo-aircraft/1",
+ "format": "sfo-aircraft/2",
  "lodDistances": [
   900,
   3500
@@ -106,5 +106,669 @@
    ],
    "sha256": "206b60e28770ccdbbb4041499d6f2f9d9ce6fff612747e5c8f1cc9884245ea76"
   }
- ]
+ ],
+ "fleet": {
+  "heavy2": {
+   "ref": "B772",
+   "lengthM": 63.7,
+   "spanM": 60.9,
+   "lods": [
+    {
+     "name": "fleet_heavy2_lod0.glb",
+     "triangles": 2606,
+     "meshes": 13,
+     "materials": [
+      "beacon",
+      "belly",
+      "blue",
+      "dark",
+      "glass",
+      "metal",
+      "nacelle",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "tyre",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -30.450000762939453,
+      0,
+      -35.990501403808594
+     ],
+     "max": [
+      30.450000762939453,
+      20.190000534057617,
+      31.220685958862305
+     ],
+     "sha256": "4d5b648ce08871987e14f2cb87b9fdeb8629af5ea9ef8646ba3d9b8529bf5ae9"
+    },
+    {
+     "name": "fleet_heavy2_lod1.glb",
+     "triangles": 1534,
+     "meshes": 13,
+     "materials": [
+      "beacon",
+      "belly",
+      "blue",
+      "dark",
+      "glass",
+      "metal",
+      "nacelle",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "tyre",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -30.450000762939453,
+      0,
+      -35.990501403808594
+     ],
+     "max": [
+      30.450000762939453,
+      20.190000534057617,
+      31.220685958862305
+     ],
+     "sha256": "63eb4de6468bfda87f0e33763adbade95f8306cfa14425c39c86703800715170"
+    },
+    {
+     "name": "fleet_heavy2_lod2.glb",
+     "triangles": 506,
+     "meshes": 9,
+     "materials": [
+      "beacon",
+      "blue",
+      "dark",
+      "nacelle",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -30.450000762939453,
+      3.2558774948120117,
+      -35.990501403808594
+     ],
+     "max": [
+      30.450000762939453,
+      20.190000534057617,
+      31.220685958862305
+     ],
+     "sha256": "986ac0f81c9a3a92dd3cb898a9ce36e9cd0ed442eb33750b1190885d766fd8ed"
+    }
+   ]
+  },
+  "heavy4": {
+   "ref": "B744",
+   "lengthM": 70.7,
+   "spanM": 64.4,
+   "lods": [
+    {
+     "name": "fleet_heavy4_lod0.glb",
+     "triangles": 3630,
+     "meshes": 13,
+     "materials": [
+      "beacon",
+      "belly",
+      "blue",
+      "dark",
+      "glass",
+      "metal",
+      "nacelle",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "tyre",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -32.20000076293945,
+      0,
+      -39.59199905395508
+     ],
+     "max": [
+      32.20000076293945,
+      21.125,
+      36.35715103149414
+     ],
+     "sha256": "ea2e4a4011509555036631f6867079efa4d709b8fcd08c7a8fab79344279d815"
+    },
+    {
+     "name": "fleet_heavy4_lod1.glb",
+     "triangles": 2054,
+     "meshes": 13,
+     "materials": [
+      "beacon",
+      "belly",
+      "blue",
+      "dark",
+      "glass",
+      "metal",
+      "nacelle",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "tyre",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -32.20000076293945,
+      0,
+      -39.59199905395508
+     ],
+     "max": [
+      32.20000076293945,
+      21.125,
+      36.35715103149414
+     ],
+     "sha256": "df94c8b63a1742eb534b976993a6f618943ea479905580ad3d572cd0d3a3ba16"
+    },
+    {
+     "name": "fleet_heavy4_lod2.glb",
+     "triangles": 714,
+     "meshes": 9,
+     "materials": [
+      "beacon",
+      "blue",
+      "dark",
+      "nacelle",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -32.20000076293945,
+      3.5021564960479736,
+      -39.59199905395508
+     ],
+     "max": [
+      32.20000076293945,
+      21.125,
+      36.35715103149414
+     ],
+     "sha256": "07a6eb21486249c1a6a6175f8928ac75d621486c0a28fb3858e605653edc6b20"
+    }
+   ]
+  },
+  "narrow": {
+   "ref": "B738",
+   "lengthM": 39.5,
+   "spanM": 35.8,
+   "lods": [
+    {
+     "name": "fleet_narrow_lod0.glb",
+     "triangles": 2494,
+     "meshes": 13,
+     "materials": [
+      "beacon",
+      "belly",
+      "blue",
+      "dark",
+      "glass",
+      "metal",
+      "nacelle",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "tyre",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -17.899999618530273,
+      0,
+      -22.1200008392334
+     ],
+     "max": [
+      17.899999618530273,
+      12.510000228881836,
+      18.2257137298584
+     ],
+     "sha256": "3e69645de0a8ee330b59a9eca2abe23c406cbcd2d05fd9b95b035c1b51b5cc0d"
+    },
+    {
+     "name": "fleet_narrow_lod1.glb",
+     "triangles": 1422,
+     "meshes": 13,
+     "materials": [
+      "beacon",
+      "belly",
+      "blue",
+      "dark",
+      "glass",
+      "metal",
+      "nacelle",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "tyre",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -17.899999618530273,
+      0,
+      -22.1200008392334
+     ],
+     "max": [
+      17.899999618530273,
+      12.510000228881836,
+      18.2257137298584
+     ],
+     "sha256": "76e6b55a76a93cce3be0656df4f49422064df34ddfceef9edac6522c527dcd18"
+    },
+    {
+     "name": "fleet_narrow_lod2.glb",
+     "triangles": 506,
+     "meshes": 9,
+     "materials": [
+      "beacon",
+      "blue",
+      "dark",
+      "nacelle",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -17.899999618530273,
+      2.1445937156677246,
+      -22.1200008392334
+     ],
+     "max": [
+      17.899999618530273,
+      12.510000228881836,
+      18.2257137298584
+     ],
+     "sha256": "91a8f0e89c7e334b27ffde98d07d7c4539aecdd5a263150815868efb80b88100"
+    }
+   ]
+  },
+  "rearjet": {
+   "ref": "CRJ9",
+   "lengthM": 36.2,
+   "spanM": 24.9,
+   "lods": [
+    {
+     "name": "fleet_rearjet_lod0.glb",
+     "triangles": 1934,
+     "meshes": 12,
+     "materials": [
+      "beacon",
+      "belly",
+      "blue",
+      "glass",
+      "metal",
+      "nacelle",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "tyre",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -12.449999809265137,
+      0,
+      -20.996000289916992
+     ],
+     "max": [
+      12.449999809265137,
+      8.756205558776855,
+      16.695270538330078
+     ],
+     "sha256": "11394f83c2841754bd8644aa153f77b82a0a556bde9e153581825b1915a3c895"
+    },
+    {
+     "name": "fleet_rearjet_lod1.glb",
+     "triangles": 1142,
+     "meshes": 12,
+     "materials": [
+      "beacon",
+      "belly",
+      "blue",
+      "glass",
+      "metal",
+      "nacelle",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "tyre",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -12.449999809265137,
+      0,
+      -20.996000289916992
+     ],
+     "max": [
+      12.449999809265137,
+      8.756205558776855,
+      16.695270538330078
+     ],
+     "sha256": "31bf8b4aeaaedead47ec2f17533025b531815a3d329165155bd8c6e828c6032c"
+    },
+    {
+     "name": "fleet_rearjet_lod2.glb",
+     "triangles": 442,
+     "meshes": 8,
+     "materials": [
+      "beacon",
+      "blue",
+      "nacelle",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -12.449999809265137,
+      2.50276255607605,
+      -20.996000289916992
+     ],
+     "max": [
+      12.449999809265137,
+      8.749246597290039,
+      16.695270538330078
+     ],
+     "sha256": "4fe16a8b5abdbfd8e776653af94744c36d2032deb246a6f1562cbf7aae7ba186"
+    }
+   ]
+  },
+  "turboprop2": {
+   "ref": "DH8D",
+   "lengthM": 32.8,
+   "spanM": 28.4,
+   "lods": [
+    {
+     "name": "fleet_turboprop2_lod0.glb",
+     "triangles": 1790,
+     "meshes": 13,
+     "materials": [
+      "beacon",
+      "belly",
+      "blue",
+      "dark",
+      "glass",
+      "metal",
+      "nacelle",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "tyre",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -14.199999809265137,
+      0,
+      -17.055999755859375
+     ],
+     "max": [
+      14.199999809265137,
+      9.230188369750977,
+      16.399999618530273
+     ],
+     "sha256": "96badb94c2d7a2ba14c573178d903f1c7d1c78a1c58f7aaba45f028c6c2d992c"
+    },
+    {
+     "name": "fleet_turboprop2_lod1.glb",
+     "triangles": 1082,
+     "meshes": 13,
+     "materials": [
+      "beacon",
+      "belly",
+      "blue",
+      "dark",
+      "glass",
+      "metal",
+      "nacelle",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "tyre",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -14.199999809265137,
+      0,
+      -17.055999755859375
+     ],
+     "max": [
+      14.199999809265137,
+      9.230188369750977,
+      16.399999618530273
+     ],
+     "sha256": "43fe635b1dc21540762a7cde9602ef301f21deabc9c6c4c3bab29efd906c830a"
+    },
+    {
+     "name": "fleet_turboprop2_lod2.glb",
+     "triangles": 370,
+     "meshes": 8,
+     "materials": [
+      "beacon",
+      "blue",
+      "nacelle",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -14.199999809265137,
+      2.706568717956543,
+      -17.055999755859375
+     ],
+     "max": [
+      14.199999809265137,
+      9.223882675170898,
+      16.399999618530273
+     ],
+     "sha256": "93493eb48be81525549a22987821c62d037891a516749a922ebf8849947ee810"
+    }
+   ]
+  },
+  "turboprop1": {
+   "ref": "PC12",
+   "lengthM": 14.4,
+   "spanM": 16.3,
+   "lods": [
+    {
+     "name": "fleet_turboprop1_lod0.glb",
+     "triangles": 1478,
+     "meshes": 12,
+     "materials": [
+      "beacon",
+      "belly",
+      "blue",
+      "dark",
+      "glass",
+      "metal",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "tyre",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -8.149999618530273,
+      0,
+      -7.559999942779541
+     ],
+     "max": [
+      8.149999618530273,
+      6.010000228881836,
+      7.48799991607666
+     ],
+     "sha256": "93f7e88ed683a3b8cbf07c28870c2385b79106bc27b7cbb6735c885a8f111e19"
+    },
+    {
+     "name": "fleet_turboprop1_lod1.glb",
+     "triangles": 889,
+     "meshes": 12,
+     "materials": [
+      "beacon",
+      "belly",
+      "blue",
+      "dark",
+      "glass",
+      "metal",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "tyre",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -8.149999618530273,
+      0,
+      -7.559999942779541
+     ],
+     "max": [
+      8.149999618530273,
+      6.010000228881836,
+      7.48799991607666
+     ],
+     "sha256": "3b7ca6ee1b1dc069044e08e4ee10cc06b1c4044d6c2aed45d2220bf37068d660"
+    },
+    {
+     "name": "fleet_turboprop1_lod2.glb",
+     "triangles": 308,
+     "meshes": 8,
+     "materials": [
+      "beacon",
+      "blue",
+      "dark",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -8.149999618530273,
+      1.6685084104537964,
+      -7.5
+     ],
+     "max": [
+      8.149999618530273,
+      6.010000228881836,
+      7.48799991607666
+     ],
+     "sha256": "d5d37a9b04ed75486ac4c96c3c0591f6768a14c0f6d478b69ae11032a4670cdb"
+    }
+   ]
+  },
+  "light": {
+   "ref": "C172",
+   "lengthM": 8.3,
+   "spanM": 11,
+   "lods": [
+    {
+     "name": "fleet_light_lod0.glb",
+     "triangles": 1478,
+     "meshes": 12,
+     "materials": [
+      "beacon",
+      "belly",
+      "blue",
+      "dark",
+      "glass",
+      "metal",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "tyre",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -5.5,
+      0,
+      -4.09499979019165
+     ],
+     "max": [
+      5.5,
+      4.284999847412109,
+      4.730999946594238
+     ],
+     "sha256": "0dbb8c772b69e786f8860aee13a9364b42519dbb97b4ba2a9e26a32529d8f29a"
+    },
+    {
+     "name": "fleet_light_lod1.glb",
+     "triangles": 889,
+     "meshes": 12,
+     "materials": [
+      "beacon",
+      "belly",
+      "blue",
+      "dark",
+      "glass",
+      "metal",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "tyre",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -5.5,
+      0,
+      -4.09499979019165
+     ],
+     "max": [
+      5.5,
+      4.284999847412109,
+      4.730999946594238
+     ],
+     "sha256": "12182a9217d68d4acecc914f74db279eb9ce16748445dc244ee4746f2d3ac691"
+    },
+    {
+     "name": "fleet_light_lod2.glb",
+     "triangles": 308,
+     "meshes": 8,
+     "materials": [
+      "beacon",
+      "blue",
+      "dark",
+      "nav_green",
+      "nav_red",
+      "nav_white",
+      "white",
+      "wing"
+     ],
+     "min": [
+      -5.5,
+      1.1494783163070679,
+      -4.034999847412109
+     ],
+     "max": [
+      5.5,
+      4.284999847412109,
+      4.730999946594238
+     ],
+     "sha256": "0098bc75b2082adb0f6167420dae2731f02c1e24735499be26768c8e19fb8178"
+    }
+   ]
+  }
+ }
 }

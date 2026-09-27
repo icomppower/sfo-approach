@@ -3,6 +3,8 @@
 import 'harbor-engine/src/ui/ui.css';
 import './games/hud.css';
 import './games/approach.js';
+import './games/tower.css';
+import './games/tower.js';
 import map from '../map.json';
 import { boot } from 'harbor-engine';
 

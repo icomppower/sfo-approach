@@ -187,6 +187,7 @@ export class Approach {
       <div class="ap-sub"><p></p></div>
       <div class="ap-data"><div><small></small><b class="ap-alt"></b></div><div><small></small><b class="ap-ias"></b></div><div><small></small><b class="ap-vs"></b></div><div><small></small><b class="ap-dist"></b></div><div><small></small><b class="ap-hdg"></b></div></div>
       <div class="ap-help"></div>
+      <a class="ap-link" href="?game=tower">🛩️ <span></span></a>
       <div class="ap-bar"><i></i></div>
       <div class="ap-touch"><button data-key="Digit0">AUTO</button><button data-key="Digit3">1</button><button data-key="Digit4">2</button><button data-key="Digit5">3</button><button data-key="Digit6">4</button><button data-key="Digit7">5</button><button data-key="KeyR">↻</button><button data-key="KeyZ">中/EN</button></div>`;
     document.body.append(root);
@@ -194,6 +195,7 @@ export class Approach {
     this.dom = { root, id: q('.ap-id b'), idSub: q('.ap-id span'), shot: q('.ap-shot em'), shotSub: q('.ap-shot i'), sub: q('.ap-sub p'), subBox: q('.ap-sub'),
       alt: q('.ap-alt'), ias: q('.ap-ias'), vs: q('.ap-vs'), dist: q('.ap-dist'), hdg: q('.ap-hdg'), labels: [...root.querySelectorAll('.ap-data small')], help: q('.ap-help'), bar: q('.ap-bar i') };
     this.dom.help.textContent = UI[this.lang].help;
+    root.querySelector('.ap-link span').textContent = this.lang === 'zh' ? '指揮塔台' : 'Control the tower';
     // on-screen buttons press the same keys (the engine's Input reads keydown / keyup on the window)
     for (const b of root.querySelectorAll('.ap-touch button')) {
       const code = b.dataset.key;

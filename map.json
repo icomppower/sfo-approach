@@ -566,6 +566,7 @@
     "default": "approach",
     "available": [
       "approach",
+      "tower",
       "sightseeing"
     ]
   },

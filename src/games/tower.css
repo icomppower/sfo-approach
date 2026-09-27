@@ -1,0 +1,32 @@
+/* SFO Tower 3D: Phase 1's HUD, command bar and menu over the engine's view (game-owned) */
+.tw-game { position: fixed; inset: 0; pointer-events: none; z-index: 41; font: 13px/1.3 'Inter', system-ui, sans-serif; color: #e6eef7; }
+.tw-game .hidden { display: none !important; }
+#tw-hud { position: absolute; top: 0; left: 0; right: 60px; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; padding: 8px 12px; background: rgba(6, 10, 16, .6); backdrop-filter: blur(8px); pointer-events: auto; font: 500 12px/1.3 'JetBrains Mono', ui-monospace, monospace; }
+#tw-hud .stat b { color: #fff; } #tw-hud .stat.ok b { color: #7ee787; } #tw-hud .stat.bad b { color: #ff6b6b; } #tw-hud .spacer { flex: 1; }
+#tw-hud button, #tw-cmdbar button, #tw-range button, .tw-game .card button { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); color: #e6eef7; border-radius: 6px; padding: 5px 9px; font: inherit; cursor: pointer; }
+#tw-hud button.active, #tw-range button.active, .tw-game .seg button.active { background: #ffcf5a; color: #10161f; border-color: #ffcf5a; }
+#tw-atis { opacity: .7; font-size: 11px; max-width: 46vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#tw-tags { position: absolute; inset: 0; overflow: hidden; }
+.tw-tag { position: absolute; left: 0; top: 0; pointer-events: auto; cursor: pointer; font: 500 11px/1.2 'JetBrains Mono', ui-monospace, monospace; color: #5be0ff; text-shadow: 0 1px 2px #000, 0 0 3px #000; padding: 2px 4px 2px 8px; border-left: 2px solid #5be0ff; background: rgba(4, 8, 14, .35); white-space: nowrap; transform-origin: 0 0; }
+.tw-tag.dep { color: #ffd166; border-left-color: #ffd166; } .tw-tag.sel { color: #fff; border-left-color: #fff; background: rgba(4, 8, 14, .7); font-weight: 700; } .tw-tag.far { opacity: .75; }
+.tw-tag b { display: block; } .tw-tag span, .tw-tag i { display: block; font-style: normal; opacity: .9; }
+#tw-ticker { position: absolute; left: 50%; bottom: 118px; transform: translateX(-50%); max-width: 80vw; font-size: 14px; pointer-events: none; }
+#tw-ticker .rb { background: rgba(0,0,0,.6); padding: 6px 12px; border-radius: 6px; color: #dff3ff; } #tw-ticker .alert { background: rgba(120, 20, 30, .8); padding: 6px 12px; border-radius: 6px; color: #fff; font-weight: 700; }
+#tw-scopeWrap { position: absolute; right: 12px; bottom: 118px; width: min(34vw, 380px); aspect-ratio: 1; pointer-events: auto; border: 1px solid rgba(255,255,255,.2); border-radius: 8px; overflow: hidden; background: #050b12; }
+#tw-scope { width: 100%; height: 100%; display: block; }
+#tw-range { position: absolute; top: 6px; right: 6px; display: flex; gap: 4px; } #tw-range button { padding: 2px 6px; font-size: 11px; }
+#tw-cmdbar { position: absolute; left: 0; right: 0; bottom: 0; background: rgba(6, 10, 16, .78); backdrop-filter: blur(8px); padding: 8px 12px; pointer-events: auto; min-height: 96px; }
+#tw-cmdbar .sel { font-size: 13px; margin-bottom: 6px; } #tw-cmdbar .sel .dim { opacity: .6; } #tw-cmdbar .sel b { font-size: 15px; color: #fff; }
+#tw-cmdRow, #tw-picker { display: flex; flex-wrap: wrap; gap: 6px; } #tw-picker { margin-top: 6px; } #tw-picker:not(.open) { display: none; }
+#tw-cmdbar button.primary { background: #ffcf5a; color: #10161f; border-color: #ffcf5a; font-weight: 700; } #tw-picker button.active { background: rgba(255,207,90,.3); }
+#tw-picker input { width: 80px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); color: #fff; border-radius: 6px; padding: 5px 8px; font: inherit; }
+.tw-game .overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(4, 8, 14, .55); pointer-events: auto; overflow: auto; }
+.tw-game .card { background: rgba(10, 16, 26, .92); border: 1px solid rgba(255,255,255,.15); border-radius: 12px; padding: 18px 20px; width: min(560px, 92vw); }
+.tw-game .card h1 { margin: 0 0 4px; font-size: 22px; } .tw-game .card h2 { font-size: 14px; margin: 10px 0 4px; } .tw-game .card p { margin: 6px 0; opacity: .85; }
+.tw-game .card .row { display: flex; align-items: center; gap: 10px; margin: 8px 0; flex-wrap: wrap; } .tw-game .card .row label { width: 92px; opacity: .8; } .tw-game .card .row b { margin-left: auto; } .tw-game .card .row b.bad { color: #ff6b6b; }
+.tw-game .seg { display: flex; gap: 4px; flex-wrap: wrap; } .tw-game .actions { display: flex; gap: 8px; margin: 10px 0; flex-wrap: wrap; }
+.tw-game .card button.primary { background: #ffcf5a; color: #10161f; border-color: #ffcf5a; font-weight: 700; padding: 8px 16px; }
+.tw-game .card input { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); color: #fff; border-radius: 6px; padding: 5px 8px; font: inherit; width: 90px; }
+.tw-game .card a { color: #ffcf5a; }
+@media (max-width: 640px) { #tw-hud { right: 0; font-size: 11px; gap: 4px 6px; padding: 6px 8px; } #tw-hud .opt, #tw-atis { display: none; } #tw-scopeWrap { width: 42vw; bottom: 150px; } #tw-ticker { bottom: 150px; font-size: 12px; } #tw-cmdbar { min-height: 120px; } .tw-tag { font-size: 10px; } }
+html.is-touch .tw-game .tc, html.is-touch .tc-top { display: none !important; }

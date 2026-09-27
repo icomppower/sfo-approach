@@ -16,8 +16,8 @@
 .ap-help { position: absolute; right: 16px; bottom: 58px; font-size: 11px; opacity: .65; text-align: right; max-width: 42vw; }
 .ap-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: rgba(255,255,255,.12); }
 .ap-bar i { display: block; height: 100%; width: 0; background: #ffcf5a; }
-.ap-touch { display: none; position: absolute; right: 12px; top: 64px; flex-direction: column; gap: 8px; pointer-events: auto; }
-.ap-touch button { min-width: 52px; height: 40px; border: 1px solid rgba(255,255,255,.35); border-radius: 8px; background: rgba(8, 14, 22, .55); color: #eef6ff; font: 600 13px/1 'Inter', system-ui, sans-serif; }
+.ap-touch { display: none; position: absolute; left: 12px; top: 64px; width: 250px; flex-wrap: wrap; gap: 8px; pointer-events: auto; } /* the engine's own tab rail owns the right edge */
+.ap-touch button { min-width: 54px; height: 40px; border: 1px solid rgba(255,255,255,.35); border-radius: 8px; background: rgba(8, 14, 22, .55); color: #eef6ff; font: 600 13px/1 'Inter', system-ui, sans-serif; }
 html.is-touch .ap-touch { display: flex; }
 html.is-touch .ap-help { display: none; }
 html.is-touch .tc-pad, html.is-touch .tc-stick { display: none !important; } /* the ferry pad is not for this map */

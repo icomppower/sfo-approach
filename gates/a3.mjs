@@ -1,5 +1,5 @@
 // A3 Render: the real App, headless Dawn on the M4, on the title's baked data with the approach game:
-//  - every director shot at its own moment shows the aircraft (pixels that change when the model is hidden ≥ 0.02 %
+//  - every director shot at its own moment (eight) shows the aircraft (pixels that change when the model is hidden ≥ 0.02 %
 //    of the frame), and the frame is neither black nor blown out;
 //  - frame budget caps hold (triangles and draw calls per frame at the fixed shots; calibrated on first run and
 //    frozen in SPEC-THRESHOLDS.md at 1.5 × / 1.25 × the measured maximum);
@@ -16,7 +16,7 @@ const RENDER = join(root, 'gates/lib/render.mjs');
 const flight = readJSON('public/flight/approach-28r.json');
 const tdT = flight.summary.touchdownT, thrT = flight.summary.thresholdT;
 // each shot at a time inside its own director slot
-const SHOTS = [['bridge', 12], ['chase', 60], ['wing', 100], ['cockpit', thrT - 30], ['tower', thrT - 20], ['spotter', thrT + 2], ['rollout', tdT + 20]];
+const SHOTS = [['establish', 10], ['bridge', 48], ['chase', 75], ['wing', 110], ['cockpit', thrT - 30], ['tower', thrT - 20], ['spotter', thrT + 2], ['rollout', tdT + 20]];
 const FPS_TARGET = 30;
 
 function child(args) {
@@ -58,7 +58,7 @@ const today = new Date().toISOString().slice(0, 10);
 if (!('A3.frameTriangles' in T)) {
   const frames = shotsRun();
   const maxT = Math.max(...frames.map((f) => f.triangles || 0)), maxD = Math.max(...frames.map((f) => f.draws || 0));
-  freeze('A3.frameTriangles', Math.ceil(maxT * 1.25), `triangles per frame, all passes, 1920×1080 low tier, the seven director shots (gates/a3.mjs); measured max ${maxT} on ${today}; cap = 1.25 × measured`);
+  freeze('A3.frameTriangles', Math.ceil(maxT * 1.25), `triangles per frame, all passes, 1920×1080 low tier, the eight director shots (gates/a3.mjs); measured max ${maxT} on ${today}; cap = 1.25 × measured`);
   freeze('A3.frameDraws', Math.ceil(maxD * 1.5), `draw calls per frame, same shots; measured max ${maxD} on ${today}; cap = 1.5 × measured`);
 }
 if (!('A3.fpsFloor' in T)) {

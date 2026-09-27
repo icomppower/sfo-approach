@@ -21,4 +21,6 @@
 html.is-touch .ap-touch { display: flex; }
 html.is-touch .ap-help { display: none; }
 html.is-touch .tc-pad, html.is-touch .tc-stick { display: none !important; } /* the ferry pad is not for this map */
+/* the engine's ferry-era chrome: walk/helm prompts, waypoint toasts, the fps box and the brand chip stay out of the shot */
+.tw-prompt, .tw-toasts, .tw-tl, .tw-brand { display: none !important; }
 @media (max-width: 640px) { .ap-data { gap: 10px; padding: 6px 8px; bottom: 40px; } .ap-data b { font-size: 14px; } .ap-id b { font-size: 16px; } .ap-sub { bottom: 96px; } .ap-sub p { font-size: 13px; } }

@@ -65,9 +65,9 @@ export function buildTimeline(flight) {
 
 export const UI = {
   en: { alt: 'ALT', ias: 'IAS', vs: 'V/S', dist: 'DIST', hdg: 'HDG', ft: 'ft', kt: 'kt', fpm: 'fpm', nm: 'NM', auto: 'AUTO', paused: 'PAUSED', free: 'FREE CAMERA',
-    shots: { bridge: 'San Mateo Bridge', chase: 'Chase', wing: 'Starboard wing', cockpit: 'Flight deck', tower: 'Tower cab', spotter: 'Bayfront spotter', rollout: 'Rollout', free: 'Free camera' },
-    help: '1–7 cameras · 0 auto · F free camera · R restart · P pause · T time of day · Z 中文 · H hide', ils: 'ILS 28R', landed: 'Landed. Restarting…' },
+    shots: { establish: 'Over the bay', bridge: 'San Mateo Bridge', chase: 'Chase', wing: 'Starboard wing', cockpit: 'Flight deck', tower: 'Tower cab', spotter: 'Bayfront spotter', rollout: 'Rollout', free: 'Free camera' },
+    help: '1–8 cameras · 0 auto · F free camera · R restart · P pause · T time of day · Z 中文 · H hide', ils: 'ILS 28R', landed: 'Landed. Restarting…' },
   zh: { alt: '高度', ias: '空速', vs: '垂直速度', dist: '距離', hdg: '航向', ft: '呎', kt: '節', fpm: '呎/分', nm: '浬', auto: '自動導演', paused: '暫停', free: '自由攝影機',
-    shots: { bridge: '聖馬刁大橋', chase: '追尾', wing: '右翼', cockpit: '駕駛艙', tower: '塔台', spotter: '灣岸拍機', rollout: '落地滑行', free: '自由攝影機' },
-    help: '1–7 鏡頭 · 0 自動 · F 自由攝影機 · R 重播 · P 暫停 · T 時間 · Z English · H 隱藏', ils: 'ILS 28R', landed: '已落地，重新開始…' },
+    shots: { establish: '灣上', bridge: '聖馬刁大橋', chase: '追尾', wing: '右翼', cockpit: '駕駛艙', tower: '塔台', spotter: '灣岸拍機', rollout: '落地滑行', free: '自由攝影機' },
+    help: '1–8 鏡頭 · 0 自動 · F 自由攝影機 · R 重播 · P 暫停 · T 時間 · Z English · H 隱藏', ils: 'ILS 28R', landed: '已落地，重新開始…' },
 };

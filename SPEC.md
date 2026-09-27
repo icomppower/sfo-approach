@@ -8,7 +8,7 @@ frozen gate ladder the run is judged by.
 A public web page (GitHub Pages) that boots the Harbor Engine on a 24 km square around KSFO built from real data (USGS
 3DEP, NOAA NCEI, NAIP, OpenStreetMap, NOAA datums, FAA NASR/CIFP via sfo-tower) and plays, watch-only, one heavy jet
 flying the ILS 28R from 9 NM to a full stop, on the SFO Tower simulation's own track, with a director cutting between
-seven cameras, a bilingual HUD and radio captions, and the day/night cycle of the engine.
+eight cameras, a bilingual HUD and radio captions, and the day/night cycle of the engine.
 
 ## 2. Frozen rules
 - Data only from the checksummed cache; pipelines deterministic (two runs byte-identical).

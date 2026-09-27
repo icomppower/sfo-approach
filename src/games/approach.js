@@ -7,7 +7,7 @@ import { buildAirfield } from './airfield.js';
 import { buildTimeline, UI } from './radio.js';
 import { JetSound } from './jetsound.js';
 
-const SHOTS = ['bridge', 'chase', 'wing', 'cockpit', 'tower', 'spotter', 'rollout'];
+const SHOTS = ['establish', 'bridge', 'chase', 'wing', 'cockpit', 'tower', 'spotter', 'rollout'];
 const FT = 0.3048;
 const base = () => (import.meta.env && import.meta.env.BASE_URL) || '/';
 
@@ -63,7 +63,7 @@ export class Approach {
     this.t = Number(app.qs.get('t')) || 0;
     this.auto = true;
     this.paused = false;
-    this.shot = app.qs.get('shot') && SHOTS.includes(app.qs.get('shot')) ? app.qs.get('shot') : 'bridge';
+    this.shot = app.qs.get('shot') && SHOTS.includes(app.qs.get('shot')) ? app.qs.get('shot') : 'establish';
     if (app.qs.get('shot')) this.auto = false;
     this.mode = 'shots'; // or 'free'
     this.hudHidden = false;
@@ -78,8 +78,9 @@ export class Approach {
     const thr = airport.runways.find((r) => r.id === '10L/28R').ends.find((e) => e.id === '28R');
     const h = thr.hdg * Math.PI / 180, fx = Math.sin(h), fz = - Math.cos(h), rx = Math.cos(h), rz = Math.sin(h); // runway direction (28R heading) and right of it
     this.thr = { x: thr.thr[0], z: thr.thr[1], y: thr.tdzeM, fx, fz, rx, rz };
+    // the bridge camera stands on the deck at the west landing: the aircraft crosses overhead at 5 NM, about 1,600 ft
     this.spots = {
-      bridge: new Vector3(8420, 42, 3640),
+      bridge: new Vector3(6905, 13, 4205),
       tower: new Vector3(model.tower ? model.tower[0] : - 3891, (model.tower ? model.tower[1] : 0) + 64, model.tower ? model.tower[2] : - 310),
       spotter: new Vector3(this.thr.x - fx * 120 - rx * 330, this.thr.y + 3.5, this.thr.z - fz * 120 - rz * 330), // right of the approach = the Millbrae / Burlingame side
     };
@@ -89,9 +90,10 @@ export class Approach {
   // ---- director: which shot at time t (auto), with the cut points on the flight's own events
   autoShot(t) {
     const f = this.flight.summary, tdT = f.touchdownT ?? this.track.duration - 40, thrT = f.thresholdT ?? tdT - 8;
-    if (t < 34) return 'bridge';
-    if (t < 82) return 'chase';
-    if (t < 122) return 'wing';
+    if (t < 22) return 'establish';
+    if (t < 60) return 'bridge';
+    if (t < 96) return 'chase';
+    if (t < 126) return 'wing';
     if (t < thrT - 42) return 'cockpit';
     if (t < thrT - 8) return 'tower';
     if (t < tdT + 9) return 'spotter';
@@ -140,6 +142,7 @@ export class Approach {
   camera(dt, p) {
     const app = this.app, cam = app.camera, m = this.model.group.position;
     const fly = app.fly;
+    if (fly.flight) { fly.flight = null; this.flyYaw = null; } // the engine's own waypoint flight (digit keys) must not steer a shot
     if (this.flyYaw === null) { this.flyYaw = fly.yaw; this.flyPitch = fly.pitch; }
     let dy = fly.yaw - this.flyYaw, dp = fly.pitch - this.flyPitch; this.flyYaw = fly.yaw; this.flyPitch = fly.pitch;
     const cut = this.shot !== this.lastShot;
@@ -148,7 +151,8 @@ export class Approach {
     const pos = this.camPos, at = this.camAt, f = this.fwd, r = this.right;
     let fov = 60, tau = 0.35, rigid = false;
     switch (this.shot) {
-      case 'bridge': { pos.copy(this.spots.bridge); at.copy(m); fov = MathUtils.clamp(3000 / Math.max(300, pos.distanceTo(m)), 14, 40); tau = 0.6; break; }
+      case 'establish': { pos.copy(m).addScaledVector(f, - 520).addScaledVector(r, 260).add(new Vector3(0, 210, 0)); at.copy(m).addScaledVector(f, 900); at.y -= 120; fov = 42; tau = 0.8; break; }
+      case 'bridge': { pos.copy(this.spots.bridge); at.copy(m); const d = pos.distanceTo(m); fov = MathUtils.clamp(2600 / Math.max(200, d), 12, 62); tau = 0.5; break; }
       case 'chase': { pos.copy(m).addScaledVector(f, - 150).addScaledVector(r, 18).add(new Vector3(0, 34, 0)); at.copy(m).addScaledVector(f, 260); fov = 55; break; }
       case 'wing': { pos.copy(m).addScaledVector(r, 62).addScaledVector(f, - 22).add(new Vector3(0, 7, 0)); at.copy(m).addScaledVector(f, 120).addScaledVector(r, - 10); fov = 50; tau = 0.2; break; }
       case 'cockpit': { pos.copy(m).addScaledVector(f, 38.5).addScaledVector(r, - 0.6).add(new Vector3(0, 5.5 + 1.6, 0)); at.copy(pos).addScaledVector(f, 200); at.y -= 200 * Math.tan(0.03 - p.pitch); fov = 68; rigid = true; break; }
@@ -183,7 +187,7 @@ export class Approach {
       <div class="ap-data"><div><small></small><b class="ap-alt"></b></div><div><small></small><b class="ap-ias"></b></div><div><small></small><b class="ap-vs"></b></div><div><small></small><b class="ap-dist"></b></div><div><small></small><b class="ap-hdg"></b></div></div>
       <div class="ap-help"></div>
       <div class="ap-bar"><i></i></div>
-      <div class="ap-touch"><button data-key="Digit0">AUTO</button><button data-key="Digit2">1</button><button data-key="Digit3">2</button><button data-key="Digit4">3</button><button data-key="Digit5">4</button><button data-key="Digit6">5</button><button data-key="KeyR">↻</button><button data-key="KeyZ">中/EN</button></div>`;
+      <div class="ap-touch"><button data-key="Digit0">AUTO</button><button data-key="Digit3">1</button><button data-key="Digit4">2</button><button data-key="Digit5">3</button><button data-key="Digit6">4</button><button data-key="Digit7">5</button><button data-key="KeyR">↻</button><button data-key="KeyZ">中/EN</button></div>`;
     document.body.append(root);
     const q = (s) => root.querySelector(s);
     this.dom = { root, id: q('.ap-id b'), idSub: q('.ap-id span'), shot: q('.ap-shot em'), shotSub: q('.ap-shot i'), sub: q('.ap-sub p'), subBox: q('.ap-sub'),
@@ -205,7 +209,7 @@ export class Approach {
     d.id.textContent = `${f.flight.callsign} · ${f.flight.aircraft.type}`;
     d.idSub.textContent = `${L.ils} · ${f.weather.conditions} · ${String(Math.round(f.weather.wind.dir)).padStart(3, '0')}/${Math.round(f.weather.wind.kt)}`;
     d.shot.textContent = this.mode === 'free' ? L.shots.free : L.shots[this.shot];
-    d.shotSub.textContent = this.mode === 'free' ? '' : (this.auto ? L.auto : `${SHOTS.indexOf(this.shot) + 1}/7`) + (this.paused ? ' · ' + L.paused : '') + (this.speed !== 1 ? ` · ${this.speed}×` : '');
+    d.shotSub.textContent = this.mode === 'free' ? '' : (this.auto ? L.auto : `${SHOTS.indexOf(this.shot) + 1}/${SHOTS.length}`) + (this.paused ? ' · ' + L.paused : '') + (this.speed !== 1 ? ` · ${this.speed}×` : '');
     const agl = p.y - this.thr.y;
     d.alt.textContent = `${Math.max(0, Math.round((p.y + this.flight.msl) / FT)).toLocaleString()} ${L.ft}`;
     d.ias.textContent = `${Math.round(p.ias)} ${L.kt}`;

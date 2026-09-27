@@ -7,7 +7,7 @@ import { root, gate, readJSON, R } from './lib/common.mjs';
 
 const flight = readJSON('public/flight/approach-28r.json');
 const tdT = flight.summary.touchdownT, thrT = flight.summary.thresholdT;
-const SHOTS = [['bridge', 12], ['chase', 60], ['wing', 100], ['cockpit', thrT - 30], ['tower', thrT - 20], ['spotter', thrT + 2], ['rollout', tdT + 20]];
+const SHOTS = [['establish', 10], ['bridge', 48], ['chase', 75], ['wing', 110], ['cockpit', thrT - 30], ['tower', thrT - 20], ['spotter', thrT + 2], ['rollout', tdT + 20]];
 function child(args) {
   const r = spawnSync(process.execPath, [join(root, 'gates/lib/render.mjs'), ...args], { cwd: root, encoding: 'utf8', maxBuffer: 1 << 26, env: { ...process.env, HARBOR_TITLE: root } });
   const line = (r.stdout || '').split('\n').find((l) => l.startsWith('RESULT '));

@@ -80,7 +80,7 @@ export class Approach {
     this.thr = { x: thr.thr[0], z: thr.thr[1], y: thr.tdzeM, fx, fz, rx, rz };
     // the bridge camera stands on the deck at the west landing: the aircraft crosses overhead at 5 NM, about 1,600 ft
     this.spots = {
-      bridge: new Vector3(6905, 13, 4205),
+      bridge: new Vector3(7160, 14, 4110),
       tower: new Vector3(model.tower ? model.tower[0] : - 3891, (model.tower ? model.tower[1] : 0) + 64, model.tower ? model.tower[2] : - 310),
       spotter: new Vector3(this.thr.x - fx * 120 - rx * 330, this.thr.y + 3.5, this.thr.z - fz * 120 - rz * 330), // right of the approach = the Millbrae / Burlingame side
     };
@@ -120,6 +120,7 @@ export class Approach {
       if (this.auto) this.shot = this.autoShot(this.t);
       this.camera(dt, p);
     }
+    if (this.airfield) { const lens = app.camera.fov / 60; for (const c of this.airfield.children) if (c.material?.uniforms?.lens) c.material.uniforms.lens.value = lens; }
     this.hud(p);
     if (this.jet) this.jet.update(app.camera.position, m.position, p, dt);
   }
@@ -152,7 +153,7 @@ export class Approach {
     let fov = 60, tau = 0.35, rigid = false;
     switch (this.shot) {
       case 'establish': { pos.copy(m).addScaledVector(f, - 520).addScaledVector(r, 260).add(new Vector3(0, 210, 0)); at.copy(m).addScaledVector(f, 900); at.y -= 120; fov = 42; tau = 0.8; break; }
-      case 'bridge': { pos.copy(this.spots.bridge); at.copy(m); const d = pos.distanceTo(m); fov = MathUtils.clamp(2600 / Math.max(200, d), 12, 62); tau = 0.5; break; }
+      case 'bridge': { pos.copy(this.spots.bridge); at.copy(m); at.y -= 0.25 * Math.max(0, m.y - pos.y); const d = pos.distanceTo(m); fov = MathUtils.clamp(3600 / Math.max(200, d), 26, 64); tau = 0.5; break; }
       case 'chase': { pos.copy(m).addScaledVector(f, - 150).addScaledVector(r, 18).add(new Vector3(0, 34, 0)); at.copy(m).addScaledVector(f, 260); fov = 55; break; }
       case 'wing': { pos.copy(m).addScaledVector(r, 62).addScaledVector(f, - 22).add(new Vector3(0, 7, 0)); at.copy(m).addScaledVector(f, 120).addScaledVector(r, - 10); fov = 50; tau = 0.2; break; }
       case 'cockpit': { pos.copy(m).addScaledVector(f, 38.5).addScaledVector(r, - 0.6).add(new Vector3(0, 5.5 + 1.6, 0)); at.copy(pos).addScaledVector(f, 200); at.y -= 200 * Math.tan(0.03 - p.pitch); fov = 68; rigid = true; break; }

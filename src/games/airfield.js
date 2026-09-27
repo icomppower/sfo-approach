@@ -137,16 +137,19 @@ export function buildAirfield(airport, heightAt) {
   if (pP.length) group.add(mesh(pP, pN, pI, new Material({ name: 'als-pier', color: new Color(0.28, 0.27, 0.25), roughness: 0.85 })));
   // lights: instanced cubes scaled with distance, emissive by day and brighter at night
   const COL = { white: [1, 0.96, 0.85], red: [1, 0.12, 0.06], green: [0.15, 1, 0.35], amber: [1, 0.7, 0.15], blue: [0.2, 0.4, 1] };
-  const cube = new BoxGeometry(0.5, 0.5, 0.5);
+  const cube = new BoxGeometry(0.34, 0.34, 0.34);
   const m = new Matrix4();
   let count = 0;
   for (const [c, list] of Object.entries(lights)) {
     if (!list.length) continue;
+    // the cube grows with distance so a light stays a point of a few pixels at any range; `lens` (fov / 60, set by
+    // the game every frame) keeps a telephoto shot from turning them into blocks
     const mat = new Material({ name: 'runway-light-' + c, color: new Color(...COL[c]), roughness: 0.4, metalness: 0,
+      uniforms: { lens: ['f32', 1] },
       vertex: /* wgsl */`
 	let centre = v.model[ 3 ].xyz;
 	let d = distance( centre, frame.cameraPos );
-	v.position = v.position * clamp( d / 350.0, 1.0, 60.0 );`,
+	v.position = v.position * clamp( d / 420.0 * mat.lens, 1.0, 50.0 );`,
       surface: /* wgsl */`
 	s.emissive = s.albedo * ( 2.5 + 14.0 * frame.night );
 	s.albedo = s.albedo * 0.25;` });
